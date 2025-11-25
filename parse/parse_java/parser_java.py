@@ -1,12 +1,16 @@
 import yaml
 import requests
 import base64
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class ParserJava:
     def __init__(self, path: str):
         self.path = path
         
-        self.GITHUB_TOKEN = "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"
+        self.GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
         parts = path.rstrip("/").split("/")
         self.owner = parts[-2]
         self.repo = parts[-1]
