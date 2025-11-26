@@ -1,0 +1,34 @@
+name: auto_env
+dependencies:
+- python=3.10
+- pip
+- pip:
+  - aiosmtpd
+  - argon2-cffi
+  - asgiref
+  - bcrypt
+  - black
+  - blacken-docs
+  - colorama
+  - docutils
+  - geoip2
+  - jinja2
+  - mysqlclient
+  - numpy
+  - oracledb
+  - pillow
+  - psycopg
+  - psycopg-pool
+  - pyenchant
+  - pylibmc
+  - pymemcache
+  - pywatchman
+  - pyyaml
+  - redis
+  - selenium
+  - sphinx
+  - sphinx-lint
+  - sphinxcontrib-spelling
+  - sqlparse
+  - tblib
+  - tzdata
