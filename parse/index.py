@@ -14,4 +14,4 @@ language = Language(path=path_java)
 print(language.get_main_language())
 
 data = parser_java.parse_repo()
-print(parser_java.save_to_yaml(data))
+parser_java.save_yaml(data)
