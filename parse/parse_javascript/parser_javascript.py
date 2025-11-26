@@ -142,9 +142,9 @@ class ParserJavaScript:
             yaml.dump(data, f, allow_unicode=True, sort_keys=False)
         print(f"Анализ завершен. Результат в: {output_file}")
 
-# --- ПРИМЕР ИСПОЛЬЗОВАНИЯ ---
+
 if __name__ == "__main__":
-    url = "https://github.com/facebook/react" 
+    url = "https://github.com/nezqt3/Scentury" 
     parser = ParserJavaScript(url)
     data = parser.parse_repo()
     parser.save_to_yaml(data)

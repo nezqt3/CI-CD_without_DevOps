@@ -1,0 +1,14 @@
+repository_name: Scentury
+language: javascript
+detected_stack:
+  framework: react
+  type: frontend
+  is_docker: false
+ci_config:
+  package_manager: npm
+  install_command: npm install
+  node_version: latest
+  has_build: true
+  build_command: npm run build
+  has_test: true
+  test_command: npm run test
