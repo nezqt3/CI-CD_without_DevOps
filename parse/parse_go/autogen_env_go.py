@@ -78,6 +78,7 @@ def get_go_dependencies(owner: str, repo: str) -> List[Tuple[str, str]]:
             go_deps.append((mod, ver))
     return go_deps
 
+
 def write_go_mod(deps: List[Tuple[str, str]], owner: str, repo: str, out_file="go.mod", go_version="1.20"):
     module_name = f"github.com/{owner}/{repo}-autogen"
     lines = []
@@ -86,14 +87,14 @@ def write_go_mod(deps: List[Tuple[str, str]], owner: str, repo: str, out_file="g
     if deps:
         lines.append("require (\n")
         for mod, ver in deps:
-            if ver:
-                lines.append(f"\t{mod} {ver}\n")
-            else:
-                lines.append(f"\t{mod} v0.0.0-0 // version not found in SBOM\n")
+            if not ver:
+                ver = "v0.0.0-0"
+            lines.append(f"\t{mod} {ver}\n")
         lines.append(")\n")
     with open(out_file, "w", encoding="utf-8") as f:
         f.writelines(lines)
     print(f"[OK] Файл {out_file} создан. Найдено Go-зависимостей: {len(deps)}")
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
