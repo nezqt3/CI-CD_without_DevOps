@@ -4,15 +4,12 @@ import shutil
 import subprocess
 from xml.etree import ElementTree
 
-
 class ParserJava:
     def __init__(self, path: str, temp_folder="repo_tmp"):
         self.repo_url = path
         self.temp_folder = temp_folder
 
-    # -------------------------
     # 1. Клонирование репозитория
-    # -------------------------
     def clone_repo(self):
         if os.path.exists(self.temp_folder):
             shutil.rmtree(self.temp_folder)
@@ -23,9 +20,7 @@ class ParserJava:
             check=True
         )
 
-    # -------------------------
     # 2. Рекурсивный сбор всех файлов
-    # -------------------------
     def parse_files(self):
         files = {}
 
@@ -42,9 +37,7 @@ class ParserJava:
 
         return files
 
-    # -------------------------
     # 3. Извлечение зависимостей из pom.xml
-    # -------------------------
     def extract_maven_deps(self):
         pom_path = os.path.join(self.temp_folder, "pom.xml")
         deps = []
@@ -59,58 +52,75 @@ class ParserJava:
             ns = {"m": "http://maven.apache.org/POM/4.0.0"}
 
             for dep in root.findall(".//m:dependency", ns):
-                group = dep.find("m:groupId", ns).text if dep.find("m:groupId", ns) is not None else None
-                artifact = dep.find("m:artifactId", ns).text if dep.find("m:artifactId", ns) is not None else None
-                version = dep.find("m:version", ns).text if dep.find("m:version", ns) is not None else None
+                d = {
+                    "groupId": None,
+                    "artifactId": None,
+                    "version": None,
+                    "scope": "compile",
+                    "optional": False,
+                    "exclusions": []
+                }
 
-                deps.append({
-                    "group": group,
-                    "artifact": artifact,
-                    "version": version
-                })
+                node = dep.find("m:groupId", ns)
+                if node is not None: d["groupId"] = node.text
+
+                node = dep.find("m:artifactId", ns)
+                if node is not None: d["artifactId"] = node.text
+
+                node = dep.find("m:version", ns)
+                if node is not None: d["version"] = node.text
+
+                node = dep.find("m:scope", ns)
+                if node is not None: d["scope"] = node.text
+
+                node = dep.find("m:optional", ns)
+                if node is not None: d["optional"] = (node.text == "true")
+
+                for exc in dep.findall("m:exclusions/m:exclusion", ns):
+                    e = {
+                        "groupId": exc.find("m:groupId", ns).text,
+                        "artifactId": exc.find("m:artifactId", ns).text
+                    }
+                    d["exclusions"].append(e)
+
+                deps.append(d)
 
         except Exception as e:
             print("Ошибка чтения pom.xml:", e)
 
         return deps
 
-    # -------------------------
     # 4. Извлечение зависимостей из Gradle
-    # -------------------------
     def extract_gradle_deps(self):
         gradle_files = []
-
-        # ищем build.gradle, build.gradle.kts и любые *.gradle
         for root, _, files in os.walk(self.temp_folder):
             for f in files:
                 if f.endswith(".gradle") or f.endswith(".gradle.kts"):
                     gradle_files.append(os.path.join(root, f))
 
-        deps = []
+        deps = set()
         for file in gradle_files:
             try:
                 with open(file, "r", encoding="utf-8") as f:
-                    text = f.read()
-
-                    # Простейший парсер зависимостей
-                    for line in text.splitlines():
+                    for line in f:
                         line = line.strip()
-
-                        if "implementation" in line or "compileOnly" in line or "api" in line:
-                            if "\"" in line:
-                                dep = line.split("\"")[1]
-                                deps.append(dep)
+                        # Ищем реальные зависимости
+                        if line.startswith(("implementation", "compileOnly", "api", "testImplementation", "runtimeOnly")):
+                            # Извлекаем строки 'group:artifact:version'
+                            if '"' in line:
+                                dep = line.split('"')[1]
+                                if dep and ":" in dep:
+                                    deps.add(dep)
                             elif "'" in line:
                                 dep = line.split("'")[1]
-                                deps.append(dep)
+                                if dep and ":" in dep:
+                                    deps.add(dep)
             except:
-                pass
+                continue
 
-        return deps
+        return sorted(deps)
 
-    # -------------------------
     # 5. Основной метод
-    # -------------------------
     def parse_repo(self):
         self.clone_repo()
 
@@ -129,7 +139,6 @@ class ParserJava:
                 "maven": maven_deps,
                 "gradle": gradle_deps
             },
-            "files": files
         }
 
         print("Удаляю локальный репозиторий...")
@@ -137,9 +146,7 @@ class ParserJava:
 
         return result
 
-    # -------------------------
     # 6. Сохранение YAML
-    # -------------------------
     def save_yaml(self, data, output="repo_data.yaml"):
         with open(output, "w", encoding="utf-8") as f:
             yaml.dump(data, f, sort_keys=False, allow_unicode=True)

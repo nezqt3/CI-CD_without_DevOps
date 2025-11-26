@@ -1,0 +1,35 @@
+repository: https://github.com/apache/kafka
+dependencies:
+  maven: []
+  gradle:
+  - :clients
+  - :connect:api
+  - :connect:json
+  - :connect:mirror-client
+  - :connect:runtime
+  - :connect:test-plugins
+  - :connect:transforms
+  - :coordinator-common
+  - :core
+  - :group-coordinator
+  - :group-coordinator:group-coordinator-api
+  - :metadata
+  - :raft
+  - :server
+  - :server-common
+  - :share-coordinator
+  - :storage
+  - :storage:storage-api
+  - :streams
+  - :streams:integration-tests
+  - :streams:streams-scala
+  - :streams:test-utils
+  - :test-common:test-common-internal-api
+  - :test-common:test-common-runtime
+  - :test-common:test-common-util
+  - :tools
+  - :tools:tools-api
+  - :transaction-coordinator
+  - org.eclipse.jgit:org.eclipse.jgit.gpg.bc:7.2.0.202503040940-r
+  - org.eclipse.jgit:org.eclipse.jgit.ssh.apache:7.2.0.202503040940-r
+  - org.eclipse.jgit:org.eclipse.jgit:7.2.0.202503040940-r
