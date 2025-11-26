@@ -7,7 +7,7 @@ path = "https://github.com/nezqt3/VirtualAssistentRZD"
 path_js = "https://github.com/nezqt3/Scentury"
 path_java = "https://github.com/apache/kafka"
 
-language = Language(path=path_js).get_main_language()
+language = Language(path=path_java).get_main_language()
 
 if language == 'JavaScript':
     parser_java_script = ParserJavaScript(path=path_js)
@@ -17,3 +17,4 @@ elif language == "Java":
     parser_java = ParserJava(path=path_java)
     data = parser_java.parse_repo()
     parser_java.save_yaml(data)
+    parser_java.save_gitlab_ci(data)
