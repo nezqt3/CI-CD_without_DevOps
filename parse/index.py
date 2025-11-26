@@ -4,7 +4,7 @@ from parse_java.parser_java import ParserJava
 from get_using_languages import Language
 
 path = "https://github.com/nezqt3/VirtualAssistentRZD"
-path_java = "https://github.com/nezqt3/cryptoAnalyzer"
+path_java = "https://github.com/apache/kafka"
 
 parser = ParserPython(path=path)
 parser_java = ParserJava(path=path_java)
