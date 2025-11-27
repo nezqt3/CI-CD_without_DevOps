@@ -1,0 +1,42 @@
+stages:
+- lint
+- build
+- test
+- deploy
+lint:
+  stage: lint
+  image: golang:1.20
+  script:
+  - go fmt ./...
+  - go vet ./...
+build:
+  stage: build
+  image: golang:1.20
+  script:
+  - go mod tidy
+  - go build -v ./...
+  artifacts:
+    paths:
+    - ./
+    expire_in: 1 hour
+  dependencies:
+  - lint
+test:
+  stage: test
+  image: golang:1.20
+  script:
+  - go test -v ./...
+  artifacts:
+    when: always
+    reports:
+      junit: '**/test-results/*.xml'
+    expire_in: 1 hour
+  dependencies:
+  - build
+deploy:
+  stage: deploy
+  image: alpine:latest
+  script:
+  - echo 'Deploy step — добавьте свои команды'
+  only:
+  - main

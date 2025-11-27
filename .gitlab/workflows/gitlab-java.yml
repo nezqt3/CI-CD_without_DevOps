@@ -1,0 +1,33 @@
+stages:
+- build
+- test
+- deploy
+variables:
+  GRADLE_OPTS: -Dorg.gradle.daemon=false
+maven_build:
+  stage: build
+  image: maven:3.9.1-openjdk-17
+  script:
+  - mvn clean install -B
+  artifacts:
+    paths:
+    - target/
+    expire_in: 1 hour
+run_tests:
+  stage: test
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew test --parallel --continue
+  artifacts:
+    when: always
+    reports:
+      junit: '**/build/test-results/test/*.xml'
+    expire_in: 1 hour
+  dependencies: []
+deploy:
+  stage: deploy
+  image: alpine:latest
+  script:
+  - echo 'Деплойить сюда можно что угодно, например на staging!'
+  only:
+  - main

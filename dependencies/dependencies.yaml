@@ -1,0 +1,1573 @@
+dependencies:
+  all:
+  - archive/tar
+  - buf.build/gen/go/bufbuild/reflect/connectrpc/go v1.19.1-20240117202343-bf8f65e8876c.2
+  - buf.build/gen/go/bufbuild/reflect/connectrpc/go/buf/reflect/v1beta1/reflectv1beta1connect
+  - buf.build/gen/go/bufbuild/reflect/protocolbuffers/go v1.36.10-20240117202343-bf8f65e8876c.1
+  - buf.build/gen/go/bufbuild/reflect/protocolbuffers/go/buf/reflect/v1beta1
+  - buf.build/go/hyperpb
+  - buf.build/go/hyperpb v0.1.3
+  - bufio
+  - bytes
+  - cloud.google.com/go/aiplatform v1.104.0
+  - cloud.google.com/go/aiplatform/apiv1
+  - cloud.google.com/go/aiplatform/apiv1/aiplatformpb
+  - cloud.google.com/go/auth
+  - cloud.google.com/go/auth/credentials
+  - cloud.google.com/go/bigquery
+  - cloud.google.com/go/bigquery v1.71.0
+  - cloud.google.com/go/pubsub
+  - cloud.google.com/go/pubsub v1.50.1
+  - cloud.google.com/go/spanner
+  - cloud.google.com/go/spanner v1.86.0
+  - cloud.google.com/go/spanner/admin/database/apiv1
+  - cloud.google.com/go/spanner/admin/database/apiv1/databasepb
+  - cloud.google.com/go/spanner/admin/instance/apiv1
+  - cloud.google.com/go/spanner/admin/instance/apiv1/instancepb
+  - cloud.google.com/go/spanner/apiv1/spannerpb
+  - cloud.google.com/go/storage
+  - cloud.google.com/go/storage v1.57.0
+  - cloud.google.com/go/vertexai v0.15.0
+  - cloud.google.com/go/vertexai/genai
+  - cmp
+  - compress/gzip
+  - connectrpc.com/connect
+  - connectrpc.com/connect v1.19.1
+  - container/heap
+  - container/list
+  - context
+  - crypto
+  - crypto/aes
+  - crypto/cipher
+  - crypto/md5
+  - crypto/rand
+  - crypto/rsa
+  - crypto/sha256
+  - crypto/sha512
+  - crypto/subtle
+  - crypto/tls
+  - crypto/x509
+  - database/sql
+  - database/sql/driver
+  - embed
+  - encoding/base64
+  - encoding/binary
+  - encoding/csv
+  - encoding/hex
+  - encoding/json
+  - encoding/pem
+  - encoding/xml
+  - errors
+  - flag
+  - fmt
+  - github.com/Azure/azure-sdk-for-go/sdk/azcore
+  - github.com/Azure/azure-sdk-for-go/sdk/azcore v1.19.1
+  - github.com/Azure/azure-sdk-for-go/sdk/azcore/runtime
+  - github.com/Azure/azure-sdk-for-go/sdk/azcore/streaming
+  - github.com/Azure/azure-sdk-for-go/sdk/azidentity
+  - github.com/Azure/azure-sdk-for-go/sdk/azidentity v1.13.0
+  - github.com/Azure/azure-sdk-for-go/sdk/data/azcosmos
+  - github.com/Azure/azure-sdk-for-go/sdk/data/azcosmos v1.4.1
+  - github.com/Azure/azure-sdk-for-go/sdk/data/aztables
+  - github.com/Azure/azure-sdk-for-go/sdk/data/aztables v1.4.0
+  - github.com/Azure/azure-sdk-for-go/sdk/storage/azblob
+  - github.com/Azure/azure-sdk-for-go/sdk/storage/azblob v1.6.2
+  - github.com/Azure/azure-sdk-for-go/sdk/storage/azblob/bloberror
+  - github.com/Azure/azure-sdk-for-go/sdk/storage/azblob/blockblob
+  - github.com/Azure/azure-sdk-for-go/sdk/storage/azdatalake
+  - github.com/Azure/azure-sdk-for-go/sdk/storage/azdatalake v1.4.2
+  - github.com/Azure/azure-sdk-for-go/sdk/storage/azdatalake/service
+  - github.com/Azure/azure-sdk-for-go/sdk/storage/azqueue
+  - github.com/Azure/azure-sdk-for-go/sdk/storage/azqueue v1.0.1
+  - github.com/Azure/go-amqp
+  - github.com/Azure/go-amqp v1.5.0
+  - github.com/ClickHouse/clickhouse-go/v2 v2.40.3
+  - github.com/GoogleCloudPlatform/opentelemetry-operations-go/exporter/trace
+  - github.com/GoogleCloudPlatform/opentelemetry-operations-go/exporter/trace v1.30.0
+  - github.com/IBM/sarama
+  - github.com/IBM/sarama v1.46.2
+  - github.com/Jeffail/checkpoint
+  - github.com/Jeffail/checkpoint v1.1.0
+  - github.com/Jeffail/gabs/v2
+  - github.com/Jeffail/gabs/v2 v2.7.0
+  - github.com/Jeffail/shutdown
+  - github.com/Jeffail/shutdown v1.1.0
+  - github.com/Masterminds/semver
+  - github.com/Masterminds/semver v1.5.0
+  - github.com/Masterminds/squirrel
+  - github.com/Masterminds/squirrel v1.5.4
+  - github.com/PaesslerAG/gval
+  - github.com/PaesslerAG/gval v1.2.4
+  - github.com/PaesslerAG/jsonpath
+  - github.com/PaesslerAG/jsonpath v0.1.1
+  - github.com/a2aproject/a2a-go v0.0.0-20251009070416-49deee794474
+  - github.com/a2aproject/a2a-go/a2a
+  - github.com/a2aproject/a2a-go/a2aclient
+  - github.com/a2aproject/a2a-go/a2aclient/agentcard
+  - github.com/apache/pulsar-client-go v0.16.0
+  - github.com/apache/pulsar-client-go/pulsar
+  - github.com/apache/pulsar-client-go/pulsar/log
+  - github.com/auth0/go-jwt-middleware/v2 v2.3.0
+  - github.com/auth0/go-jwt-middleware/v2/jwks
+  - github.com/auth0/go-jwt-middleware/v2/validator
+  - github.com/authzed/authzed-go v1.6.0
+  - github.com/authzed/authzed-go/proto/authzed/api/v1
+  - github.com/authzed/authzed-go/v1
+  - github.com/authzed/grpcutil
+  - github.com/authzed/grpcutil v0.0.0-20250221190651-1985b19b35b8
+  - github.com/aws/aws-lambda-go v1.50.0
+  - github.com/aws/aws-lambda-go/lambda
+  - github.com/aws/aws-sdk-go-v2 v1.39.6
+  - github.com/aws/aws-sdk-go-v2/aws
+  - github.com/aws/aws-sdk-go-v2/config
+  - github.com/aws/aws-sdk-go-v2/config v1.31.12
+  - github.com/aws/aws-sdk-go-v2/credentials
+  - github.com/aws/aws-sdk-go-v2/credentials v1.18.16
+  - github.com/aws/aws-sdk-go-v2/credentials/ec2rolecreds
+  - github.com/aws/aws-sdk-go-v2/credentials/stscreds
+  - github.com/aws/aws-sdk-go-v2/feature/dynamodb/expression
+  - github.com/aws/aws-sdk-go-v2/feature/dynamodb/expression v1.8.14
+  - github.com/aws/aws-sdk-go-v2/feature/rds/auth
+  - github.com/aws/aws-sdk-go-v2/feature/s3/manager
+  - github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.19.12
+  - github.com/aws/aws-sdk-go-v2/service/bedrockruntime
+  - github.com/aws/aws-sdk-go-v2/service/bedrockruntime v1.41.0
+  - github.com/aws/aws-sdk-go-v2/service/bedrockruntime/types
+  - github.com/aws/aws-sdk-go-v2/service/cloudwatch
+  - github.com/aws/aws-sdk-go-v2/service/cloudwatch v1.51.1
+  - github.com/aws/aws-sdk-go-v2/service/cloudwatch/types
+  - github.com/aws/aws-sdk-go-v2/service/dynamodb
+  - github.com/aws/aws-sdk-go-v2/service/dynamodb v1.51.0
+  - github.com/aws/aws-sdk-go-v2/service/dynamodb/types
+  - github.com/aws/aws-sdk-go-v2/service/firehose
+  - github.com/aws/aws-sdk-go-v2/service/firehose v1.41.6
+  - github.com/aws/aws-sdk-go-v2/service/firehose/types
+  - github.com/aws/aws-sdk-go-v2/service/kinesis
+  - github.com/aws/aws-sdk-go-v2/service/kinesis v1.40.5
+  - github.com/aws/aws-sdk-go-v2/service/kinesis/types
+  - github.com/aws/aws-sdk-go-v2/service/lambda
+  - github.com/aws/aws-sdk-go-v2/service/lambda v1.78.0
+  - github.com/aws/aws-sdk-go-v2/service/s3
+  - github.com/aws/aws-sdk-go-v2/service/s3 v1.88.4
+  - github.com/aws/aws-sdk-go-v2/service/s3/types
+  - github.com/aws/aws-sdk-go-v2/service/sns
+  - github.com/aws/aws-sdk-go-v2/service/sns v1.38.5
+  - github.com/aws/aws-sdk-go-v2/service/sns/types
+  - github.com/aws/aws-sdk-go-v2/service/sqs
+  - github.com/aws/aws-sdk-go-v2/service/sqs v1.42.8
+  - github.com/aws/aws-sdk-go-v2/service/sqs/types
+  - github.com/aws/aws-sdk-go-v2/service/sts
+  - github.com/aws/aws-sdk-go-v2/service/sts v1.38.6
+  - github.com/aws/smithy-go
+  - github.com/aws/smithy-go/ptr
+  - github.com/beanstalkd/go-beanstalk
+  - github.com/beanstalkd/go-beanstalk v0.2.0
+  - github.com/benhoyt/goawk v1.29.1
+  - github.com/benhoyt/goawk/interp
+  - github.com/benhoyt/goawk/parser
+  - github.com/bmatcuk/doublestar/v4
+  - github.com/bmatcuk/doublestar/v4 v4.9.1
+  - github.com/bradfitz/gomemcache v0.0.0-20250403215159-8d39553ac7cf
+  - github.com/bradfitz/gomemcache/memcache
+  - github.com/bufbuild/prototransform
+  - github.com/bufbuild/prototransform v0.4.0
+  - github.com/bwmarrin/discordgo
+  - github.com/bwmarrin/discordgo v0.29.0
+  - github.com/bwmarrin/snowflake
+  - github.com/bwmarrin/snowflake v0.3.0
+  - github.com/cenkalti/backoff/v4
+  - github.com/cenkalti/backoff/v4 v4.3.0
+  - github.com/clbanning/mxj/v2
+  - github.com/clbanning/mxj/v2 v2.7.0
+  - github.com/cohere-ai/cohere-go/v2
+  - github.com/cohere-ai/cohere-go/v2/option
+  - github.com/cohere-ai/cohere-go/v2/v2
+  - github.com/colinmarc/hdfs
+  - github.com/colinmarc/hdfs v1.1.3
+  - github.com/couchbase/gocb/v2
+  - github.com/couchbase/gocb/v2 v2.11.1
+  - github.com/cyborginc/cyborgdb-go
+  - github.com/cyborginc/cyborgdb-go v0.12.0
+  - github.com/databricks/databricks-sql-go v1.9.0
+  - github.com/dgraph-io/ristretto/v2
+  - github.com/dgraph-io/ristretto/v2 v2.3.0
+  - github.com/dop251/goja
+  - github.com/dop251/goja v0.0.0-20250630131328-58d95d85e994
+  - github.com/dop251/goja_nodejs v0.0.0-20250409162600-f7acab6894b0
+  - github.com/dop251/goja_nodejs/console
+  - github.com/dop251/goja_nodejs/require
+  - github.com/dustin/go-humanize
+  - github.com/dustin/go-humanize v1.0.1
+  - github.com/ebitengine/purego
+  - github.com/ebitengine/purego v0.8.4
+  - github.com/eclipse/paho.mqtt.golang
+  - github.com/eclipse/paho.mqtt.golang v1.5.1
+  - github.com/elastic/elastic-transport-go/v8 v8.7.0
+  - github.com/elastic/elastic-transport-go/v8/elastictransport
+  - github.com/elastic/go-elasticsearch/v8
+  - github.com/elastic/go-elasticsearch/v8 v8.19.0
+  - github.com/elastic/go-elasticsearch/v8/typedapi/core/bulk
+  - github.com/elastic/go-elasticsearch/v8/typedapi/types
+  - github.com/fatih/color
+  - github.com/generikvault/gvalstrings
+  - github.com/generikvault/gvalstrings v0.0.0-20180926130504-471f38f0112a
+  - github.com/getsentry/sentry-go
+  - github.com/getsentry/sentry-go v0.35.3
+  - github.com/go-faker/faker/v4
+  - github.com/go-faker/faker/v4 v4.7.0
+  - github.com/go-faker/faker/v4/pkg/options
+  - github.com/go-git/go-git/v5
+  - github.com/go-git/go-git/v5 v5.16.3
+  - github.com/go-git/go-git/v5/plumbing
+  - github.com/go-git/go-git/v5/plumbing/transport
+  - github.com/go-git/go-git/v5/plumbing/transport/http
+  - github.com/go-git/go-git/v5/plumbing/transport/ssh
+  - github.com/go-jose/go-jose/v4
+  - github.com/go-jose/go-jose/v4 v4.1.3
+  - github.com/go-jose/go-jose/v4/jwt
+  - github.com/go-mysql-org/go-mysql v1.13.0
+  - github.com/go-mysql-org/go-mysql/canal
+  - github.com/go-mysql-org/go-mysql/mysql
+  - github.com/go-mysql-org/go-mysql/replication
+  - github.com/go-mysql-org/go-mysql/schema
+  - github.com/go-resty/resty/v2
+  - github.com/go-resty/resty/v2 v2.16.5
+  - github.com/go-sql-driver/mysql
+  - github.com/go-sql-driver/mysql v1.9.3
+  - github.com/go-viper/mapstructure/v2
+  - github.com/go-viper/mapstructure/v2 v2.4.0
+  - github.com/gocql/gocql
+  - github.com/gocql/gocql v1.7.0
+  - github.com/gofrs/uuid/v5
+  - github.com/gofrs/uuid/v5 v5.3.2
+  - github.com/golang-jwt/jwt/v5
+  - github.com/golang-jwt/jwt/v5 v5.3.0
+  - github.com/google/go-cmp v0.7.0
+  - github.com/google/go-cmp/cmp
+  - github.com/google/go-cmp/cmp/cmpopts
+  - github.com/google/uuid
+  - github.com/googleapis/go-sql-spanner v1.19.0
+  - github.com/gorilla/handlers
+  - github.com/gorilla/mux
+  - github.com/gosimple/slug
+  - github.com/gosimple/slug v1.15.0
+  - github.com/hamba/avro/v2
+  - github.com/hamba/avro/v2 v2.30.0
+  - github.com/hashicorp/golang-lru/v2
+  - github.com/influxdata/influxdb1-client v0.0.0-20220302092344-a9ab5670611c
+  - github.com/influxdata/influxdb1-client/pkg/escape
+  - github.com/influxdata/influxdb1-client/v2
+  - github.com/jackc/pgconn
+  - github.com/jackc/pgio
+  - github.com/jackc/pgtype
+  - github.com/jackc/pgx/v4
+  - github.com/jackc/pgx/v4 v4.18.3
+  - github.com/jackc/pgx/v4/pgxpool
+  - github.com/jackc/pgx/v5 v5.7.6
+  - github.com/jackc/pgx/v5/pgconn
+  - github.com/jackc/pgx/v5/pgproto3
+  - github.com/jackc/pgx/v5/pgtype
+  - github.com/jackc/pgx/v5/pgxpool
+  - github.com/jackc/pgx/v5/stdlib
+  - github.com/jhump/protoreflect v1.17.0
+  - github.com/jhump/protoreflect/desc
+  - github.com/jhump/protoreflect/desc/protoparse
+  - github.com/klauspost/compress/gzip
+  - github.com/lib/pq
+  - github.com/lib/pq v1.10.9
+  - github.com/linkedin/goavro/v2
+  - github.com/linkedin/goavro/v2 v2.14.0
+  - github.com/mark3labs/mcp-go v0.41.1
+  - github.com/mark3labs/mcp-go/mcp
+  - github.com/mark3labs/mcp-go/server
+  - github.com/matoous/go-nanoid/v2
+  - github.com/matoous/go-nanoid/v2 v2.1.0
+  - github.com/microcosm-cc/bluemonday
+  - github.com/microcosm-cc/bluemonday v1.0.27
+  - github.com/microsoft/go-mssqldb
+  - github.com/microsoft/go-mssqldb v1.9.3
+  - github.com/microsoft/gocosmos v1.1.1
+  - github.com/nats-io/nats.go
+  - github.com/nats-io/nats.go v1.46.1
+  - github.com/nats-io/nats.go/jetstream
+  - github.com/nats-io/nkeys
+  - github.com/nats-io/nkeys v0.4.11
+  - github.com/nats-io/stan.go
+  - github.com/nats-io/stan.go v0.10.4
+  - github.com/neo4j/neo4j-go-driver/v5 v5.28.4
+  - github.com/neo4j/neo4j-go-driver/v5/neo4j
+  - github.com/neo4j/neo4j-go-driver/v5/neo4j/config
+  - github.com/nsf/jsondiff
+  - github.com/nsf/jsondiff v0.0.0-20230430225905-43f6cf3098c1
+  - github.com/nsqio/go-nsq
+  - github.com/nsqio/go-nsq v1.1.0
+  - github.com/oklog/ulid/v2
+  - github.com/oklog/ulid/v2 v2.1.1
+  - github.com/opensearch-project/opensearch-go/v3
+  - github.com/opensearch-project/opensearch-go/v3 v3.1.0
+  - github.com/opensearch-project/opensearch-go/v3/opensearchapi
+  - github.com/opensearch-project/opensearch-go/v3/opensearchutil
+  - github.com/opensearch-project/opensearch-go/v3/signer/awsv2
+  - github.com/ory/dockertest/v3
+  - github.com/ory/dockertest/v3 v3.12.0
+  - github.com/ory/dockertest/v3/docker
+  - github.com/oschwald/geoip2-golang
+  - github.com/oschwald/geoip2-golang v1.13.0
+  - github.com/parquet-go/parquet-go
+  - github.com/parquet-go/parquet-go v0.25.1
+  - github.com/parquet-go/parquet-go/compress
+  - github.com/parquet-go/parquet-go/format
+  - github.com/pebbe/zmq4
+  - github.com/pebbe/zmq4 v1.4.0
+  - github.com/pgvector/pgvector-go
+  - github.com/pinecone-io/go-pinecone v1.1.1
+  - github.com/pinecone-io/go-pinecone/pinecone
+  - github.com/pkg/sftp
+  - github.com/pkg/sftp v1.13.9
+  - github.com/pkoukk/tiktoken-go
+  - github.com/pkoukk/tiktoken-go v0.1.8
+  - github.com/prometheus/client_golang v1.23.2
+  - github.com/prometheus/client_golang/prometheus
+  - github.com/prometheus/client_golang/prometheus/collectors
+  - github.com/prometheus/client_golang/prometheus/promhttp
+  - github.com/prometheus/client_golang/prometheus/push
+  - github.com/prometheus/common v0.67.1
+  - github.com/prometheus/common/model
+  - github.com/pusher/pusher-http-go
+  - github.com/pusher/pusher-http-go v4.0.1+incompatible
+  - github.com/qdrant/go-client v1.15.2
+  - github.com/qdrant/go-client/qdrant
+  - github.com/questdb/go-questdb-client/v4
+  - github.com/questdb/go-questdb-client/v4 v4.0.0
+  - github.com/r3labs/diff/v3
+  - github.com/r3labs/diff/v3 v3.0.2
+  - github.com/rabbitmq/amqp091-go
+  - github.com/rabbitmq/amqp091-go v1.10.0
+  - github.com/rcrowley/go-metrics
+  - github.com/rcrowley/go-metrics v0.0.0-20250401214520-65e299d6c5c9
+  - github.com/redis/go-redis/v9
+  - github.com/redis/go-redis/v9 v9.14.0
+  - github.com/redpanda-data/benthos/v4 v4.61.0
+  - github.com/redpanda-data/benthos/v4/public/bloblang
+  - github.com/redpanda-data/benthos/v4/public/components/io
+  - github.com/redpanda-data/benthos/v4/public/components/pure
+  - github.com/redpanda-data/benthos/v4/public/components/pure/extended
+  - github.com/redpanda-data/benthos/v4/public/schema
+  - github.com/redpanda-data/benthos/v4/public/service
+  - github.com/redpanda-data/benthos/v4/public/service/codec
+  - github.com/redpanda-data/benthos/v4/public/service/integration
+  - github.com/redpanda-data/benthos/v4/public/utils/netutil
+  - github.com/redpanda-data/common-go/redpanda-otel-exporter
+  - github.com/redpanda-data/common-go/redpanda-otel-exporter v0.1.0
+  - github.com/redpanda-data/common-go/secrets
+  - github.com/redpanda-data/common-go/secrets v0.1.4
+  - github.com/redpanda-data/connect/public/bundle/free/v4
+  - github.com/redpanda-data/connect/public/bundle/free/v4 v4.66.1
+  - github.com/redpanda-data/connect/v4/internal/ack
+  - github.com/redpanda-data/connect/v4/internal/agent
+  - github.com/redpanda-data/connect/v4/internal/agent/runtimepb
+  - github.com/redpanda-data/connect/v4/internal/asyncroutine
+  - github.com/redpanda-data/connect/v4/internal/cli
+  - github.com/redpanda-data/connect/v4/internal/confx
+  - github.com/redpanda-data/connect/v4/internal/dispatch
+  - github.com/redpanda-data/connect/v4/internal/gateway
+  - github.com/redpanda-data/connect/v4/internal/impl/a2a
+  - github.com/redpanda-data/connect/v4/internal/impl/amqp09
+  - github.com/redpanda-data/connect/v4/internal/impl/amqp1
+  - github.com/redpanda-data/connect/v4/internal/impl/avro
+  - github.com/redpanda-data/connect/v4/internal/impl/awk
+  - github.com/redpanda-data/connect/v4/internal/impl/aws
+  - github.com/redpanda-data/connect/v4/internal/impl/aws/config
+  - github.com/redpanda-data/connect/v4/internal/impl/azure
+  - github.com/redpanda-data/connect/v4/internal/impl/azure/cosmosdb
+  - github.com/redpanda-data/connect/v4/internal/impl/beanstalkd
+  - github.com/redpanda-data/connect/v4/internal/impl/cassandra
+  - github.com/redpanda-data/connect/v4/internal/impl/changelog
+  - github.com/redpanda-data/connect/v4/internal/impl/cockroachdb
+  - github.com/redpanda-data/connect/v4/internal/impl/cohere
+  - github.com/redpanda-data/connect/v4/internal/impl/confluent
+  - github.com/redpanda-data/connect/v4/internal/impl/confluent/sr
+  - github.com/redpanda-data/connect/v4/internal/impl/couchbase
+  - github.com/redpanda-data/connect/v4/internal/impl/couchbase/client
+  - github.com/redpanda-data/connect/v4/internal/impl/crypto
+  - github.com/redpanda-data/connect/v4/internal/impl/cyborgdb
+  - github.com/redpanda-data/connect/v4/internal/impl/cypher
+  - github.com/redpanda-data/connect/v4/internal/impl/dgraph
+  - github.com/redpanda-data/connect/v4/internal/impl/discord
+  - github.com/redpanda-data/connect/v4/internal/impl/elasticsearch/v8
+  - github.com/redpanda-data/connect/v4/internal/impl/ffi
+  - github.com/redpanda-data/connect/v4/internal/impl/ffi/impl
+  - github.com/redpanda-data/connect/v4/internal/impl/gateway
+  - github.com/redpanda-data/connect/v4/internal/impl/gcp
+  - github.com/redpanda-data/connect/v4/internal/impl/gcp/enterprise
+  - github.com/redpanda-data/connect/v4/internal/impl/gcp/enterprise/changestreams
+  - github.com/redpanda-data/connect/v4/internal/impl/gcp/enterprise/changestreams/changestreamstest
+  - github.com/redpanda-data/connect/v4/internal/impl/gcp/enterprise/changestreams/metadata
+  - github.com/redpanda-data/connect/v4/internal/impl/git
+  - github.com/redpanda-data/connect/v4/internal/impl/google
+  - github.com/redpanda-data/connect/v4/internal/impl/hdfs
+  - github.com/redpanda-data/connect/v4/internal/impl/html
+  - github.com/redpanda-data/connect/v4/internal/impl/influxdb
+  - github.com/redpanda-data/connect/v4/internal/impl/jaeger
+  - github.com/redpanda-data/connect/v4/internal/impl/javascript
+  - github.com/redpanda-data/connect/v4/internal/impl/jira
+  - github.com/redpanda-data/connect/v4/internal/impl/jira/jirahttp
+  - github.com/redpanda-data/connect/v4/internal/impl/jira/jirahttp/http_metrics
+  - github.com/redpanda-data/connect/v4/internal/impl/jsonpath
+  - github.com/redpanda-data/connect/v4/internal/impl/kafka
+  - github.com/redpanda-data/connect/v4/internal/impl/kafka/aws
+  - github.com/redpanda-data/connect/v4/internal/impl/kafka/enterprise
+  - github.com/redpanda-data/connect/v4/internal/impl/lang
+  - github.com/redpanda-data/connect/v4/internal/impl/maxmind
+  - github.com/redpanda-data/connect/v4/internal/impl/memcached
+  - github.com/redpanda-data/connect/v4/internal/impl/mongodb
+  - github.com/redpanda-data/connect/v4/internal/impl/mongodb/cdc
+  - github.com/redpanda-data/connect/v4/internal/impl/mqtt
+  - github.com/redpanda-data/connect/v4/internal/impl/msgpack
+  - github.com/redpanda-data/connect/v4/internal/impl/mssqlserver
+  - github.com/redpanda-data/connect/v4/internal/impl/mssqlserver/replication
+  - github.com/redpanda-data/connect/v4/internal/impl/mysql
+  - github.com/redpanda-data/connect/v4/internal/impl/nanomsg
+  - github.com/redpanda-data/connect/v4/internal/impl/nats
+  - github.com/redpanda-data/connect/v4/internal/impl/nsq
+  - github.com/redpanda-data/connect/v4/internal/impl/ockam
+  - github.com/redpanda-data/connect/v4/internal/impl/ollama
+  - github.com/redpanda-data/connect/v4/internal/impl/openai
+  - github.com/redpanda-data/connect/v4/internal/impl/opensearch
+  - github.com/redpanda-data/connect/v4/internal/impl/opensearch/aws
+  - github.com/redpanda-data/connect/v4/internal/impl/otlp
+  - github.com/redpanda-data/connect/v4/internal/impl/parquet
+  - github.com/redpanda-data/connect/v4/internal/impl/pinecone
+  - github.com/redpanda-data/connect/v4/internal/impl/postgresql
+  - github.com/redpanda-data/connect/v4/internal/impl/postgresql/aws
+  - github.com/redpanda-data/connect/v4/internal/impl/postgresql/pglogicalstream
+  - github.com/redpanda-data/connect/v4/internal/impl/postgresql/pglogicalstream/sanitize
+  - github.com/redpanda-data/connect/v4/internal/impl/prometheus
+  - github.com/redpanda-data/connect/v4/internal/impl/protobuf
+  - github.com/redpanda-data/connect/v4/internal/impl/protobuf/common
+  - github.com/redpanda-data/connect/v4/internal/impl/pulsar
+  - github.com/redpanda-data/connect/v4/internal/impl/pusher
+  - github.com/redpanda-data/connect/v4/internal/impl/qdrant
+  - github.com/redpanda-data/connect/v4/internal/impl/questdb
+  - github.com/redpanda-data/connect/v4/internal/impl/redis
+  - github.com/redpanda-data/connect/v4/internal/impl/redpanda
+  - github.com/redpanda-data/connect/v4/internal/impl/redpanda/migrator
+  - github.com/redpanda-data/connect/v4/internal/impl/redpanda/redpandatest
+  - github.com/redpanda-data/connect/v4/internal/impl/sentry
+  - github.com/redpanda-data/connect/v4/internal/impl/sftp
+  - github.com/redpanda-data/connect/v4/internal/impl/slack
+  - github.com/redpanda-data/connect/v4/internal/impl/snowflake
+  - github.com/redpanda-data/connect/v4/internal/impl/snowflake/streaming
+  - github.com/redpanda-data/connect/v4/internal/impl/snowflake/streaming/int128
+  - github.com/redpanda-data/connect/v4/internal/impl/spicedb
+  - github.com/redpanda-data/connect/v4/internal/impl/splunk
+  - github.com/redpanda-data/connect/v4/internal/impl/sql
+  - github.com/redpanda-data/connect/v4/internal/impl/statsd
+  - github.com/redpanda-data/connect/v4/internal/impl/text
+  - github.com/redpanda-data/connect/v4/internal/impl/tigerbeetle
+  - github.com/redpanda-data/connect/v4/internal/impl/timeplus
+  - github.com/redpanda-data/connect/v4/internal/impl/timeplus/driver
+  - github.com/redpanda-data/connect/v4/internal/impl/timeplus/http
+  - github.com/redpanda-data/connect/v4/internal/impl/twitter
+  - github.com/redpanda-data/connect/v4/internal/impl/wasm
+  - github.com/redpanda-data/connect/v4/internal/impl/xml
+  - github.com/redpanda-data/connect/v4/internal/impl/zeromq
+  - github.com/redpanda-data/connect/v4/internal/license
+  - github.com/redpanda-data/connect/v4/internal/mcp
+  - github.com/redpanda-data/connect/v4/internal/mcp/repository
+  - github.com/redpanda-data/connect/v4/internal/mcp/starlark
+  - github.com/redpanda-data/connect/v4/internal/mcp/tools
+  - github.com/redpanda-data/connect/v4/internal/plugins
+  - github.com/redpanda-data/connect/v4/internal/pool
+  - github.com/redpanda-data/connect/v4/internal/protoconnect
+  - github.com/redpanda-data/connect/v4/internal/protohealth
+  - github.com/redpanda-data/connect/v4/internal/retries
+  - github.com/redpanda-data/connect/v4/internal/rpcplugin
+  - github.com/redpanda-data/connect/v4/internal/rpcplugin/runtimepb
+  - github.com/redpanda-data/connect/v4/internal/rpcplugin/subprocess
+  - github.com/redpanda-data/connect/v4/internal/secrets
+  - github.com/redpanda-data/connect/v4/internal/serverless
+  - github.com/redpanda-data/connect/v4/internal/serviceaccount
+  - github.com/redpanda-data/connect/v4/internal/singleton
+  - github.com/redpanda-data/connect/v4/internal/telemetry
+  - github.com/redpanda-data/connect/v4/internal/template
+  - github.com/redpanda-data/connect/v4/internal/tracing
+  - github.com/redpanda-data/connect/v4/internal/typed
+  - github.com/redpanda-data/connect/v4/public/components/a2a
+  - github.com/redpanda-data/connect/v4/public/components/all
+  - github.com/redpanda-data/connect/v4/public/components/amqp09
+  - github.com/redpanda-data/connect/v4/public/components/amqp1
+  - github.com/redpanda-data/connect/v4/public/components/avro
+  - github.com/redpanda-data/connect/v4/public/components/aws
+  - github.com/redpanda-data/connect/v4/public/components/azure
+  - github.com/redpanda-data/connect/v4/public/components/beanstalkd
+  - github.com/redpanda-data/connect/v4/public/components/cassandra
+  - github.com/redpanda-data/connect/v4/public/components/changelog
+  - github.com/redpanda-data/connect/v4/public/components/cloud
+  - github.com/redpanda-data/connect/v4/public/components/cockroachdb
+  - github.com/redpanda-data/connect/v4/public/components/cohere
+  - github.com/redpanda-data/connect/v4/public/components/community
+  - github.com/redpanda-data/connect/v4/public/components/confluent
+  - github.com/redpanda-data/connect/v4/public/components/couchbase
+  - github.com/redpanda-data/connect/v4/public/components/crypto
+  - github.com/redpanda-data/connect/v4/public/components/cyborgdb
+  - github.com/redpanda-data/connect/v4/public/components/cypher
+  - github.com/redpanda-data/connect/v4/public/components/dgraph
+  - github.com/redpanda-data/connect/v4/public/components/discord
+  - github.com/redpanda-data/connect/v4/public/components/elasticsearch/v8
+  - github.com/redpanda-data/connect/v4/public/components/ffi
+  - github.com/redpanda-data/connect/v4/public/components/gateway
+  - github.com/redpanda-data/connect/v4/public/components/gcp
+  - github.com/redpanda-data/connect/v4/public/components/gcp/enterprise
+  - github.com/redpanda-data/connect/v4/public/components/git
+  - github.com/redpanda-data/connect/v4/public/components/google
+  - github.com/redpanda-data/connect/v4/public/components/hdfs
+  - github.com/redpanda-data/connect/v4/public/components/influxdb
+  - github.com/redpanda-data/connect/v4/public/components/io
+  - github.com/redpanda-data/connect/v4/public/components/jaeger
+  - github.com/redpanda-data/connect/v4/public/components/javascript
+  - github.com/redpanda-data/connect/v4/public/components/jira
+  - github.com/redpanda-data/connect/v4/public/components/kafka
+  - github.com/redpanda-data/connect/v4/public/components/kafka/enterprise
+  - github.com/redpanda-data/connect/v4/public/components/maxmind
+  - github.com/redpanda-data/connect/v4/public/components/memcached
+  - github.com/redpanda-data/connect/v4/public/components/mongodb
+  - github.com/redpanda-data/connect/v4/public/components/mongodb/enterprise
+  - github.com/redpanda-data/connect/v4/public/components/mqtt
+  - github.com/redpanda-data/connect/v4/public/components/msgpack
+  - github.com/redpanda-data/connect/v4/public/components/mssqlserver
+  - github.com/redpanda-data/connect/v4/public/components/mysql
+  - github.com/redpanda-data/connect/v4/public/components/nanomsg
+  - github.com/redpanda-data/connect/v4/public/components/nats
+  - github.com/redpanda-data/connect/v4/public/components/nsq
+  - github.com/redpanda-data/connect/v4/public/components/ockam
+  - github.com/redpanda-data/connect/v4/public/components/ollama
+  - github.com/redpanda-data/connect/v4/public/components/openai
+  - github.com/redpanda-data/connect/v4/public/components/opensearch
+  - github.com/redpanda-data/connect/v4/public/components/otlp
+  - github.com/redpanda-data/connect/v4/public/components/pinecone
+  - github.com/redpanda-data/connect/v4/public/components/postgresql
+  - github.com/redpanda-data/connect/v4/public/components/prometheus
+  - github.com/redpanda-data/connect/v4/public/components/pulsar
+  - github.com/redpanda-data/connect/v4/public/components/pure
+  - github.com/redpanda-data/connect/v4/public/components/pure/extended
+  - github.com/redpanda-data/connect/v4/public/components/pusher
+  - github.com/redpanda-data/connect/v4/public/components/qdrant
+  - github.com/redpanda-data/connect/v4/public/components/questdb
+  - github.com/redpanda-data/connect/v4/public/components/redis
+  - github.com/redpanda-data/connect/v4/public/components/redpanda
+  - github.com/redpanda-data/connect/v4/public/components/sentry
+  - github.com/redpanda-data/connect/v4/public/components/sftp
+  - github.com/redpanda-data/connect/v4/public/components/slack
+  - github.com/redpanda-data/connect/v4/public/components/snowflake
+  - github.com/redpanda-data/connect/v4/public/components/spicedb
+  - github.com/redpanda-data/connect/v4/public/components/splunk
+  - github.com/redpanda-data/connect/v4/public/components/sql
+  - github.com/redpanda-data/connect/v4/public/components/sql/base
+  - github.com/redpanda-data/connect/v4/public/components/statsd
+  - github.com/redpanda-data/connect/v4/public/components/text
+  - github.com/redpanda-data/connect/v4/public/components/tigerbeetle
+  - github.com/redpanda-data/connect/v4/public/components/timeplus
+  - github.com/redpanda-data/connect/v4/public/components/twitter
+  - github.com/redpanda-data/connect/v4/public/components/wasm
+  - github.com/redpanda-data/connect/v4/public/components/zeromq
+  - github.com/redpanda-data/connect/v4/public/plugin/go/rpcn
+  - github.com/redpanda-data/connect/v4/public/schema
+  - github.com/redpanda-data/redpanda/src/transform-sdk/go/transform
+  - github.com/rivo/uniseg
+  - github.com/rs/xid
+  - github.com/rs/xid v1.6.0
+  - github.com/sashabaranov/go-openai
+  - github.com/sashabaranov/go-openai v1.41.2
+  - github.com/sashabaranov/go-openai/jsonschema
+  - github.com/segmentio/encoding/thrift
+  - github.com/sijms/go-ora/v2 v2.9.0
+  - github.com/slack-go/slack
+  - github.com/slack-go/slack v0.17.3
+  - github.com/slack-go/slack/socketmode
+  - github.com/smira/go-statsd
+  - github.com/smira/go-statsd v1.3.4
+  - github.com/snowflakedb/gosnowflake
+  - github.com/snowflakedb/gosnowflake v1.17.0
+  - github.com/sourcegraph/conc v0.3.0
+  - github.com/sourcegraph/conc/pool
+  - github.com/stretchr/testify v1.11.1
+  - github.com/stretchr/testify/assert
+  - github.com/stretchr/testify/mock
+  - github.com/stretchr/testify/require
+  - github.com/stretchr/testify/suite
+  - github.com/testcontainers/testcontainers-go/modules/mongodb
+  - github.com/testcontainers/testcontainers-go/modules/ollama
+  - github.com/testcontainers/testcontainers-go/modules/ollama v0.39.0
+  - github.com/testcontainers/testcontainers-go/modules/qdrant
+  - github.com/testcontainers/testcontainers-go/modules/qdrant v0.39.0
+  - github.com/tetratelabs/wazero
+  - github.com/tetratelabs/wazero v1.9.0
+  - github.com/tetratelabs/wazero/api
+  - github.com/tetratelabs/wazero/imports/wasi_snapshot_preview1
+  - github.com/tetratelabs/wazero/sys
+  - github.com/tigerbeetle/tigerbeetle-go
+  - github.com/tigerbeetle/tigerbeetle-go v0.16.61
+  - github.com/tigerbeetle/tigerbeetle-go/pkg/types
+  - github.com/timeplus-io/proton-go-driver/v2
+  - github.com/timeplus-io/proton-go-driver/v2 v2.1.2
+  - github.com/tmc/langchaingo v0.1.13
+  - github.com/tmc/langchaingo/textsplitter
+  - github.com/trinodb/trino-go-client v0.330.0
+  - github.com/twmb/franz-go v1.20.5
+  - github.com/twmb/franz-go/pkg/kadm
+  - github.com/twmb/franz-go/pkg/kadm v1.17.1
+  - github.com/twmb/franz-go/pkg/kerr
+  - github.com/twmb/franz-go/pkg/kfake
+  - github.com/twmb/franz-go/pkg/kfake v0.0.0-20251115002817-3affad808a82
+  - github.com/twmb/franz-go/pkg/kgo
+  - github.com/twmb/franz-go/pkg/kmsg
+  - github.com/twmb/franz-go/pkg/kmsg v1.12.0
+  - github.com/twmb/franz-go/pkg/sasl
+  - github.com/twmb/franz-go/pkg/sasl/aws
+  - github.com/twmb/franz-go/pkg/sasl/oauth
+  - github.com/twmb/franz-go/pkg/sasl/plain
+  - github.com/twmb/franz-go/pkg/sasl/scram
+  - github.com/twmb/franz-go/pkg/sr
+  - github.com/twmb/franz-go/pkg/sr v1.5.0
+  - github.com/twmb/go-cache v1.2.1
+  - github.com/twmb/go-cache/cache
+  - github.com/urfave/cli/v2
+  - github.com/vmihailenco/msgpack/v5
+  - github.com/vmihailenco/msgpack/v5 v5.4.1
+  - github.com/xdg-go/scram
+  - github.com/xdg-go/scram v1.1.2
+  - github.com/xeipuuv/gojsonschema
+  - github.com/xeipuuv/gojsonschema v1.2.0
+  - github.com/xitongsys/parquet-go v1.6.2
+  - github.com/xitongsys/parquet-go-source v0.0.0-20241021075129-b732d2ac9c9b
+  - github.com/xitongsys/parquet-go-source/buffer
+  - github.com/xitongsys/parquet-go/parquet
+  - github.com/xitongsys/parquet-go/reader
+  - github.com/xitongsys/parquet-go/writer
+  - github.com/youmark/pkcs8
+  - github.com/youmark/pkcs8 v0.0.0-20240726163527-a2c0da244d78
+  - go.mongodb.org/mongo-driver/v2 v2.3.1
+  - go.mongodb.org/mongo-driver/v2/bson
+  - go.mongodb.org/mongo-driver/v2/mongo
+  - go.mongodb.org/mongo-driver/v2/mongo/options
+  - go.mongodb.org/mongo-driver/v2/mongo/writeconcern
+  - go.nanomsg.org/mangos/v3
+  - go.nanomsg.org/mangos/v3 v3.4.2
+  - go.nanomsg.org/mangos/v3/protocol/pub
+  - go.nanomsg.org/mangos/v3/protocol/pull
+  - go.nanomsg.org/mangos/v3/protocol/push
+  - go.nanomsg.org/mangos/v3/protocol/sub
+  - go.nanomsg.org/mangos/v3/transport/all
+  - go.opentelemetry.io/otel
+  - go.opentelemetry.io/otel v1.38.0
+  - go.opentelemetry.io/otel/attribute
+  - go.opentelemetry.io/otel/exporters/jaeger
+  - go.opentelemetry.io/otel/exporters/jaeger v1.17.0
+  - go.opentelemetry.io/otel/exporters/otlp/otlptrace
+  - go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.38.0
+  - go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc
+  - go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc v1.38.0
+  - go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp
+  - go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp v1.38.0
+  - go.opentelemetry.io/otel/propagation
+  - go.opentelemetry.io/otel/sdk v1.38.0
+  - go.opentelemetry.io/otel/sdk/resource
+  - go.opentelemetry.io/otel/sdk/trace
+  - go.opentelemetry.io/otel/sdk/trace/tracetest
+  - go.opentelemetry.io/otel/semconv/v1.7.0
+  - go.opentelemetry.io/otel/semconv/v1.9.0
+  - go.opentelemetry.io/otel/trace
+  - go.opentelemetry.io/otel/trace v1.38.0
+  - go.opentelemetry.io/otel/trace/noop
+  - go.starlark.net v0.0.0-20250318223901-d9371fef63fe
+  - go.starlark.net/lib/json
+  - go.starlark.net/starlark
+  - go.starlark.net/syntax
+  - go.uber.org/multierr
+  - go.uber.org/multierr v1.11.0
+  - golang.org/x/crypto v0.45.0
+  - golang.org/x/crypto/argon2
+  - golang.org/x/crypto/bcrypt
+  - golang.org/x/crypto/ssh
+  - golang.org/x/crypto/ssh/knownhosts
+  - golang.org/x/net v0.47.0
+  - golang.org/x/net/html/charset
+  - golang.org/x/net/http2
+  - golang.org/x/net/http2/h2c
+  - golang.org/x/oauth2
+  - golang.org/x/oauth2/clientcredentials
+  - golang.org/x/oauth2/google
+  - golang.org/x/sync v0.18.0
+  - golang.org/x/sync/errgroup
+  - golang.org/x/sync/semaphore
+  - golang.org/x/sync/syncmap
+  - golang.org/x/sys/windows
+  - golang.org/x/text v0.31.0
+  - golang.org/x/text/encoding/charmap
+  - google.golang.org/api v0.252.0
+  - google.golang.org/api/drive/v3
+  - google.golang.org/api/drivelabels/v2
+  - google.golang.org/api/googleapi
+  - google.golang.org/api/iterator
+  - google.golang.org/api/option
+  - google.golang.org/genai
+  - google.golang.org/grpc
+  - google.golang.org/grpc/codes
+  - google.golang.org/grpc/credentials
+  - google.golang.org/grpc/credentials/insecure
+  - google.golang.org/grpc/health/grpc_health_v1
+  - google.golang.org/grpc/reflection
+  - google.golang.org/grpc/status
+  - google.golang.org/protobuf v1.36.10
+  - google.golang.org/protobuf/encoding/protojson
+  - google.golang.org/protobuf/encoding/prototext
+  - google.golang.org/protobuf/proto
+  - google.golang.org/protobuf/reflect/protodesc
+  - google.golang.org/protobuf/reflect/protoreflect
+  - google.golang.org/protobuf/reflect/protoregistry
+  - google.golang.org/protobuf/runtime/protoimpl
+  - google.golang.org/protobuf/types/descriptorpb
+  - google.golang.org/protobuf/types/dynamicpb
+  - google.golang.org/protobuf/types/known/durationpb
+  - google.golang.org/protobuf/types/known/structpb
+  - google.golang.org/protobuf/types/known/timestamppb
+  - google/protobuf/timestamp.proto
+  - gopkg.in/yaml.v3
+  - hash
+  - hash/fnv
+  - io
+  - io/fs
+  - iter
+  - log
+  - log/slog
+  - maps
+  - math
+  - math/big
+  - math/bits
+  - math/rand
+  - math/rand/v2
+  - mime
+  - mime/multipart
+  - modernc.org/sqlite
+  - modernc.org/sqlite v1.39.1
+  - net
+  - net/http
+  - net/http/httptest
+  - net/http/httputil
+  - net/textproto
+  - net/url
+  - os
+  - os/exec
+  - os/signal
+  - os/user
+  - path
+  - path/filepath
+  - reflect
+  - regexp
+  - runtime
+  - slices
+  - sort
+  - strconv
+  - strings
+  - stuffs/thething.proto
+  - sync
+  - sync/atomic
+  - syscall
+  - testing
+  - testing/fstest
+  - text/template
+  - time
+  - unicode
+  - unicode/utf8
+  - unsafe
+  standard_library:
+  - archive/tar
+  - bufio
+  - bytes
+  - cmp
+  - compress/gzip
+  - container/heap
+  - container/list
+  - context
+  - crypto
+  - crypto/aes
+  - crypto/cipher
+  - crypto/md5
+  - crypto/rand
+  - crypto/rsa
+  - crypto/sha256
+  - crypto/sha512
+  - crypto/subtle
+  - crypto/tls
+  - crypto/x509
+  - database/sql
+  - database/sql/driver
+  - embed
+  - encoding/base64
+  - encoding/binary
+  - encoding/csv
+  - encoding/hex
+  - encoding/json
+  - encoding/pem
+  - encoding/xml
+  - errors
+  - flag
+  - fmt
+  - golang.org/x/crypto v0.45.0
+  - golang.org/x/crypto/argon2
+  - golang.org/x/crypto/bcrypt
+  - golang.org/x/crypto/ssh
+  - golang.org/x/crypto/ssh/knownhosts
+  - golang.org/x/net v0.47.0
+  - golang.org/x/net/html/charset
+  - golang.org/x/net/http2
+  - golang.org/x/net/http2/h2c
+  - golang.org/x/oauth2
+  - golang.org/x/oauth2/clientcredentials
+  - golang.org/x/oauth2/google
+  - golang.org/x/sync v0.18.0
+  - golang.org/x/sync/errgroup
+  - golang.org/x/sync/semaphore
+  - golang.org/x/sync/syncmap
+  - golang.org/x/sys/windows
+  - golang.org/x/text v0.31.0
+  - golang.org/x/text/encoding/charmap
+  - hash
+  - hash/fnv
+  - io
+  - io/fs
+  - iter
+  - log
+  - log/slog
+  - maps
+  - math
+  - math/big
+  - math/bits
+  - math/rand
+  - math/rand/v2
+  - mime
+  - mime/multipart
+  - net
+  - net/http
+  - net/http/httptest
+  - net/http/httputil
+  - net/textproto
+  - net/url
+  - os
+  - os/exec
+  - os/signal
+  - os/user
+  - path
+  - path/filepath
+  - reflect
+  - regexp
+  - runtime
+  - slices
+  - sort
+  - strconv
+  - strings
+  - sync
+  - sync/atomic
+  - syscall
+  - testing
+  - testing/fstest
+  - text/template
+  - time
+  - unicode
+  - unicode/utf8
+  - unsafe
+  third_party:
+  - buf.build/gen/go/bufbuild/reflect/connectrpc/go v1.19.1-20240117202343-bf8f65e8876c.2
+  - buf.build/gen/go/bufbuild/reflect/connectrpc/go/buf/reflect/v1beta1/reflectv1beta1connect
+  - buf.build/gen/go/bufbuild/reflect/protocolbuffers/go v1.36.10-20240117202343-bf8f65e8876c.1
+  - buf.build/gen/go/bufbuild/reflect/protocolbuffers/go/buf/reflect/v1beta1
+  - buf.build/go/hyperpb
+  - buf.build/go/hyperpb v0.1.3
+  - cloud.google.com/go/aiplatform v1.104.0
+  - cloud.google.com/go/aiplatform/apiv1
+  - cloud.google.com/go/aiplatform/apiv1/aiplatformpb
+  - cloud.google.com/go/auth
+  - cloud.google.com/go/auth/credentials
+  - cloud.google.com/go/bigquery
+  - cloud.google.com/go/bigquery v1.71.0
+  - cloud.google.com/go/pubsub
+  - cloud.google.com/go/pubsub v1.50.1
+  - cloud.google.com/go/spanner
+  - cloud.google.com/go/spanner v1.86.0
+  - cloud.google.com/go/spanner/admin/database/apiv1
+  - cloud.google.com/go/spanner/admin/database/apiv1/databasepb
+  - cloud.google.com/go/spanner/admin/instance/apiv1
+  - cloud.google.com/go/spanner/admin/instance/apiv1/instancepb
+  - cloud.google.com/go/spanner/apiv1/spannerpb
+  - cloud.google.com/go/storage
+  - cloud.google.com/go/storage v1.57.0
+  - cloud.google.com/go/vertexai v0.15.0
+  - cloud.google.com/go/vertexai/genai
+  - connectrpc.com/connect
+  - connectrpc.com/connect v1.19.1
+  - github.com/Azure/azure-sdk-for-go/sdk/azcore
+  - github.com/Azure/azure-sdk-for-go/sdk/azcore v1.19.1
+  - github.com/Azure/azure-sdk-for-go/sdk/azcore/runtime
+  - github.com/Azure/azure-sdk-for-go/sdk/azcore/streaming
+  - github.com/Azure/azure-sdk-for-go/sdk/azidentity
+  - github.com/Azure/azure-sdk-for-go/sdk/azidentity v1.13.0
+  - github.com/Azure/azure-sdk-for-go/sdk/data/azcosmos
+  - github.com/Azure/azure-sdk-for-go/sdk/data/azcosmos v1.4.1
+  - github.com/Azure/azure-sdk-for-go/sdk/data/aztables
+  - github.com/Azure/azure-sdk-for-go/sdk/data/aztables v1.4.0
+  - github.com/Azure/azure-sdk-for-go/sdk/storage/azblob
+  - github.com/Azure/azure-sdk-for-go/sdk/storage/azblob v1.6.2
+  - github.com/Azure/azure-sdk-for-go/sdk/storage/azblob/bloberror
+  - github.com/Azure/azure-sdk-for-go/sdk/storage/azblob/blockblob
+  - github.com/Azure/azure-sdk-for-go/sdk/storage/azdatalake
+  - github.com/Azure/azure-sdk-for-go/sdk/storage/azdatalake v1.4.2
+  - github.com/Azure/azure-sdk-for-go/sdk/storage/azdatalake/service
+  - github.com/Azure/azure-sdk-for-go/sdk/storage/azqueue
+  - github.com/Azure/azure-sdk-for-go/sdk/storage/azqueue v1.0.1
+  - github.com/Azure/go-amqp
+  - github.com/Azure/go-amqp v1.5.0
+  - github.com/ClickHouse/clickhouse-go/v2 v2.40.3
+  - github.com/GoogleCloudPlatform/opentelemetry-operations-go/exporter/trace
+  - github.com/GoogleCloudPlatform/opentelemetry-operations-go/exporter/trace v1.30.0
+  - github.com/IBM/sarama
+  - github.com/IBM/sarama v1.46.2
+  - github.com/Jeffail/checkpoint
+  - github.com/Jeffail/checkpoint v1.1.0
+  - github.com/Jeffail/gabs/v2
+  - github.com/Jeffail/gabs/v2 v2.7.0
+  - github.com/Jeffail/shutdown
+  - github.com/Jeffail/shutdown v1.1.0
+  - github.com/Masterminds/semver
+  - github.com/Masterminds/semver v1.5.0
+  - github.com/Masterminds/squirrel
+  - github.com/Masterminds/squirrel v1.5.4
+  - github.com/PaesslerAG/gval
+  - github.com/PaesslerAG/gval v1.2.4
+  - github.com/PaesslerAG/jsonpath
+  - github.com/PaesslerAG/jsonpath v0.1.1
+  - github.com/a2aproject/a2a-go v0.0.0-20251009070416-49deee794474
+  - github.com/a2aproject/a2a-go/a2a
+  - github.com/a2aproject/a2a-go/a2aclient
+  - github.com/a2aproject/a2a-go/a2aclient/agentcard
+  - github.com/apache/pulsar-client-go v0.16.0
+  - github.com/apache/pulsar-client-go/pulsar
+  - github.com/apache/pulsar-client-go/pulsar/log
+  - github.com/auth0/go-jwt-middleware/v2 v2.3.0
+  - github.com/auth0/go-jwt-middleware/v2/jwks
+  - github.com/auth0/go-jwt-middleware/v2/validator
+  - github.com/authzed/authzed-go v1.6.0
+  - github.com/authzed/authzed-go/proto/authzed/api/v1
+  - github.com/authzed/authzed-go/v1
+  - github.com/authzed/grpcutil
+  - github.com/authzed/grpcutil v0.0.0-20250221190651-1985b19b35b8
+  - github.com/aws/aws-lambda-go v1.50.0
+  - github.com/aws/aws-lambda-go/lambda
+  - github.com/aws/aws-sdk-go-v2 v1.39.6
+  - github.com/aws/aws-sdk-go-v2/aws
+  - github.com/aws/aws-sdk-go-v2/config
+  - github.com/aws/aws-sdk-go-v2/config v1.31.12
+  - github.com/aws/aws-sdk-go-v2/credentials
+  - github.com/aws/aws-sdk-go-v2/credentials v1.18.16
+  - github.com/aws/aws-sdk-go-v2/credentials/ec2rolecreds
+  - github.com/aws/aws-sdk-go-v2/credentials/stscreds
+  - github.com/aws/aws-sdk-go-v2/feature/dynamodb/expression
+  - github.com/aws/aws-sdk-go-v2/feature/dynamodb/expression v1.8.14
+  - github.com/aws/aws-sdk-go-v2/feature/rds/auth
+  - github.com/aws/aws-sdk-go-v2/feature/s3/manager
+  - github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.19.12
+  - github.com/aws/aws-sdk-go-v2/service/bedrockruntime
+  - github.com/aws/aws-sdk-go-v2/service/bedrockruntime v1.41.0
+  - github.com/aws/aws-sdk-go-v2/service/bedrockruntime/types
+  - github.com/aws/aws-sdk-go-v2/service/cloudwatch
+  - github.com/aws/aws-sdk-go-v2/service/cloudwatch v1.51.1
+  - github.com/aws/aws-sdk-go-v2/service/cloudwatch/types
+  - github.com/aws/aws-sdk-go-v2/service/dynamodb
+  - github.com/aws/aws-sdk-go-v2/service/dynamodb v1.51.0
+  - github.com/aws/aws-sdk-go-v2/service/dynamodb/types
+  - github.com/aws/aws-sdk-go-v2/service/firehose
+  - github.com/aws/aws-sdk-go-v2/service/firehose v1.41.6
+  - github.com/aws/aws-sdk-go-v2/service/firehose/types
+  - github.com/aws/aws-sdk-go-v2/service/kinesis
+  - github.com/aws/aws-sdk-go-v2/service/kinesis v1.40.5
+  - github.com/aws/aws-sdk-go-v2/service/kinesis/types
+  - github.com/aws/aws-sdk-go-v2/service/lambda
+  - github.com/aws/aws-sdk-go-v2/service/lambda v1.78.0
+  - github.com/aws/aws-sdk-go-v2/service/s3
+  - github.com/aws/aws-sdk-go-v2/service/s3 v1.88.4
+  - github.com/aws/aws-sdk-go-v2/service/s3/types
+  - github.com/aws/aws-sdk-go-v2/service/sns
+  - github.com/aws/aws-sdk-go-v2/service/sns v1.38.5
+  - github.com/aws/aws-sdk-go-v2/service/sns/types
+  - github.com/aws/aws-sdk-go-v2/service/sqs
+  - github.com/aws/aws-sdk-go-v2/service/sqs v1.42.8
+  - github.com/aws/aws-sdk-go-v2/service/sqs/types
+  - github.com/aws/aws-sdk-go-v2/service/sts
+  - github.com/aws/aws-sdk-go-v2/service/sts v1.38.6
+  - github.com/aws/smithy-go
+  - github.com/aws/smithy-go/ptr
+  - github.com/beanstalkd/go-beanstalk
+  - github.com/beanstalkd/go-beanstalk v0.2.0
+  - github.com/benhoyt/goawk v1.29.1
+  - github.com/benhoyt/goawk/interp
+  - github.com/benhoyt/goawk/parser
+  - github.com/bmatcuk/doublestar/v4
+  - github.com/bmatcuk/doublestar/v4 v4.9.1
+  - github.com/bradfitz/gomemcache v0.0.0-20250403215159-8d39553ac7cf
+  - github.com/bradfitz/gomemcache/memcache
+  - github.com/bufbuild/prototransform
+  - github.com/bufbuild/prototransform v0.4.0
+  - github.com/bwmarrin/discordgo
+  - github.com/bwmarrin/discordgo v0.29.0
+  - github.com/bwmarrin/snowflake
+  - github.com/bwmarrin/snowflake v0.3.0
+  - github.com/cenkalti/backoff/v4
+  - github.com/cenkalti/backoff/v4 v4.3.0
+  - github.com/clbanning/mxj/v2
+  - github.com/clbanning/mxj/v2 v2.7.0
+  - github.com/cohere-ai/cohere-go/v2
+  - github.com/cohere-ai/cohere-go/v2/option
+  - github.com/cohere-ai/cohere-go/v2/v2
+  - github.com/colinmarc/hdfs
+  - github.com/colinmarc/hdfs v1.1.3
+  - github.com/couchbase/gocb/v2
+  - github.com/couchbase/gocb/v2 v2.11.1
+  - github.com/cyborginc/cyborgdb-go
+  - github.com/cyborginc/cyborgdb-go v0.12.0
+  - github.com/databricks/databricks-sql-go v1.9.0
+  - github.com/dgraph-io/ristretto/v2
+  - github.com/dgraph-io/ristretto/v2 v2.3.0
+  - github.com/dop251/goja
+  - github.com/dop251/goja v0.0.0-20250630131328-58d95d85e994
+  - github.com/dop251/goja_nodejs v0.0.0-20250409162600-f7acab6894b0
+  - github.com/dop251/goja_nodejs/console
+  - github.com/dop251/goja_nodejs/require
+  - github.com/dustin/go-humanize
+  - github.com/dustin/go-humanize v1.0.1
+  - github.com/ebitengine/purego
+  - github.com/ebitengine/purego v0.8.4
+  - github.com/eclipse/paho.mqtt.golang
+  - github.com/eclipse/paho.mqtt.golang v1.5.1
+  - github.com/elastic/elastic-transport-go/v8 v8.7.0
+  - github.com/elastic/elastic-transport-go/v8/elastictransport
+  - github.com/elastic/go-elasticsearch/v8
+  - github.com/elastic/go-elasticsearch/v8 v8.19.0
+  - github.com/elastic/go-elasticsearch/v8/typedapi/core/bulk
+  - github.com/elastic/go-elasticsearch/v8/typedapi/types
+  - github.com/fatih/color
+  - github.com/generikvault/gvalstrings
+  - github.com/generikvault/gvalstrings v0.0.0-20180926130504-471f38f0112a
+  - github.com/getsentry/sentry-go
+  - github.com/getsentry/sentry-go v0.35.3
+  - github.com/go-faker/faker/v4
+  - github.com/go-faker/faker/v4 v4.7.0
+  - github.com/go-faker/faker/v4/pkg/options
+  - github.com/go-git/go-git/v5
+  - github.com/go-git/go-git/v5 v5.16.3
+  - github.com/go-git/go-git/v5/plumbing
+  - github.com/go-git/go-git/v5/plumbing/transport
+  - github.com/go-git/go-git/v5/plumbing/transport/http
+  - github.com/go-git/go-git/v5/plumbing/transport/ssh
+  - github.com/go-jose/go-jose/v4
+  - github.com/go-jose/go-jose/v4 v4.1.3
+  - github.com/go-jose/go-jose/v4/jwt
+  - github.com/go-mysql-org/go-mysql v1.13.0
+  - github.com/go-mysql-org/go-mysql/canal
+  - github.com/go-mysql-org/go-mysql/mysql
+  - github.com/go-mysql-org/go-mysql/replication
+  - github.com/go-mysql-org/go-mysql/schema
+  - github.com/go-resty/resty/v2
+  - github.com/go-resty/resty/v2 v2.16.5
+  - github.com/go-sql-driver/mysql
+  - github.com/go-sql-driver/mysql v1.9.3
+  - github.com/go-viper/mapstructure/v2
+  - github.com/go-viper/mapstructure/v2 v2.4.0
+  - github.com/gocql/gocql
+  - github.com/gocql/gocql v1.7.0
+  - github.com/gofrs/uuid/v5
+  - github.com/gofrs/uuid/v5 v5.3.2
+  - github.com/golang-jwt/jwt/v5
+  - github.com/golang-jwt/jwt/v5 v5.3.0
+  - github.com/google/go-cmp v0.7.0
+  - github.com/google/go-cmp/cmp
+  - github.com/google/go-cmp/cmp/cmpopts
+  - github.com/google/uuid
+  - github.com/googleapis/go-sql-spanner v1.19.0
+  - github.com/gorilla/handlers
+  - github.com/gorilla/mux
+  - github.com/gosimple/slug
+  - github.com/gosimple/slug v1.15.0
+  - github.com/hamba/avro/v2
+  - github.com/hamba/avro/v2 v2.30.0
+  - github.com/hashicorp/golang-lru/v2
+  - github.com/influxdata/influxdb1-client v0.0.0-20220302092344-a9ab5670611c
+  - github.com/influxdata/influxdb1-client/pkg/escape
+  - github.com/influxdata/influxdb1-client/v2
+  - github.com/jackc/pgconn
+  - github.com/jackc/pgio
+  - github.com/jackc/pgtype
+  - github.com/jackc/pgx/v4
+  - github.com/jackc/pgx/v4 v4.18.3
+  - github.com/jackc/pgx/v4/pgxpool
+  - github.com/jackc/pgx/v5 v5.7.6
+  - github.com/jackc/pgx/v5/pgconn
+  - github.com/jackc/pgx/v5/pgproto3
+  - github.com/jackc/pgx/v5/pgtype
+  - github.com/jackc/pgx/v5/pgxpool
+  - github.com/jackc/pgx/v5/stdlib
+  - github.com/jhump/protoreflect v1.17.0
+  - github.com/jhump/protoreflect/desc
+  - github.com/jhump/protoreflect/desc/protoparse
+  - github.com/klauspost/compress/gzip
+  - github.com/lib/pq
+  - github.com/lib/pq v1.10.9
+  - github.com/linkedin/goavro/v2
+  - github.com/linkedin/goavro/v2 v2.14.0
+  - github.com/mark3labs/mcp-go v0.41.1
+  - github.com/mark3labs/mcp-go/mcp
+  - github.com/mark3labs/mcp-go/server
+  - github.com/matoous/go-nanoid/v2
+  - github.com/matoous/go-nanoid/v2 v2.1.0
+  - github.com/microcosm-cc/bluemonday
+  - github.com/microcosm-cc/bluemonday v1.0.27
+  - github.com/microsoft/go-mssqldb
+  - github.com/microsoft/go-mssqldb v1.9.3
+  - github.com/microsoft/gocosmos v1.1.1
+  - github.com/nats-io/nats.go
+  - github.com/nats-io/nats.go v1.46.1
+  - github.com/nats-io/nats.go/jetstream
+  - github.com/nats-io/nkeys
+  - github.com/nats-io/nkeys v0.4.11
+  - github.com/nats-io/stan.go
+  - github.com/nats-io/stan.go v0.10.4
+  - github.com/neo4j/neo4j-go-driver/v5 v5.28.4
+  - github.com/neo4j/neo4j-go-driver/v5/neo4j
+  - github.com/neo4j/neo4j-go-driver/v5/neo4j/config
+  - github.com/nsf/jsondiff
+  - github.com/nsf/jsondiff v0.0.0-20230430225905-43f6cf3098c1
+  - github.com/nsqio/go-nsq
+  - github.com/nsqio/go-nsq v1.1.0
+  - github.com/oklog/ulid/v2
+  - github.com/oklog/ulid/v2 v2.1.1
+  - github.com/opensearch-project/opensearch-go/v3
+  - github.com/opensearch-project/opensearch-go/v3 v3.1.0
+  - github.com/opensearch-project/opensearch-go/v3/opensearchapi
+  - github.com/opensearch-project/opensearch-go/v3/opensearchutil
+  - github.com/opensearch-project/opensearch-go/v3/signer/awsv2
+  - github.com/ory/dockertest/v3
+  - github.com/ory/dockertest/v3 v3.12.0
+  - github.com/ory/dockertest/v3/docker
+  - github.com/oschwald/geoip2-golang
+  - github.com/oschwald/geoip2-golang v1.13.0
+  - github.com/parquet-go/parquet-go
+  - github.com/parquet-go/parquet-go v0.25.1
+  - github.com/parquet-go/parquet-go/compress
+  - github.com/parquet-go/parquet-go/format
+  - github.com/pebbe/zmq4
+  - github.com/pebbe/zmq4 v1.4.0
+  - github.com/pgvector/pgvector-go
+  - github.com/pinecone-io/go-pinecone v1.1.1
+  - github.com/pinecone-io/go-pinecone/pinecone
+  - github.com/pkg/sftp
+  - github.com/pkg/sftp v1.13.9
+  - github.com/pkoukk/tiktoken-go
+  - github.com/pkoukk/tiktoken-go v0.1.8
+  - github.com/prometheus/client_golang v1.23.2
+  - github.com/prometheus/client_golang/prometheus
+  - github.com/prometheus/client_golang/prometheus/collectors
+  - github.com/prometheus/client_golang/prometheus/promhttp
+  - github.com/prometheus/client_golang/prometheus/push
+  - github.com/prometheus/common v0.67.1
+  - github.com/prometheus/common/model
+  - github.com/pusher/pusher-http-go
+  - github.com/pusher/pusher-http-go v4.0.1+incompatible
+  - github.com/qdrant/go-client v1.15.2
+  - github.com/qdrant/go-client/qdrant
+  - github.com/questdb/go-questdb-client/v4
+  - github.com/questdb/go-questdb-client/v4 v4.0.0
+  - github.com/r3labs/diff/v3
+  - github.com/r3labs/diff/v3 v3.0.2
+  - github.com/rabbitmq/amqp091-go
+  - github.com/rabbitmq/amqp091-go v1.10.0
+  - github.com/rcrowley/go-metrics
+  - github.com/rcrowley/go-metrics v0.0.0-20250401214520-65e299d6c5c9
+  - github.com/redis/go-redis/v9
+  - github.com/redis/go-redis/v9 v9.14.0
+  - github.com/redpanda-data/benthos/v4 v4.61.0
+  - github.com/redpanda-data/benthos/v4/public/bloblang
+  - github.com/redpanda-data/benthos/v4/public/components/io
+  - github.com/redpanda-data/benthos/v4/public/components/pure
+  - github.com/redpanda-data/benthos/v4/public/components/pure/extended
+  - github.com/redpanda-data/benthos/v4/public/schema
+  - github.com/redpanda-data/benthos/v4/public/service
+  - github.com/redpanda-data/benthos/v4/public/service/codec
+  - github.com/redpanda-data/benthos/v4/public/service/integration
+  - github.com/redpanda-data/benthos/v4/public/utils/netutil
+  - github.com/redpanda-data/common-go/redpanda-otel-exporter
+  - github.com/redpanda-data/common-go/redpanda-otel-exporter v0.1.0
+  - github.com/redpanda-data/common-go/secrets
+  - github.com/redpanda-data/common-go/secrets v0.1.4
+  - github.com/redpanda-data/connect/public/bundle/free/v4
+  - github.com/redpanda-data/connect/public/bundle/free/v4 v4.66.1
+  - github.com/redpanda-data/connect/v4/internal/ack
+  - github.com/redpanda-data/connect/v4/internal/agent
+  - github.com/redpanda-data/connect/v4/internal/agent/runtimepb
+  - github.com/redpanda-data/connect/v4/internal/asyncroutine
+  - github.com/redpanda-data/connect/v4/internal/cli
+  - github.com/redpanda-data/connect/v4/internal/confx
+  - github.com/redpanda-data/connect/v4/internal/dispatch
+  - github.com/redpanda-data/connect/v4/internal/gateway
+  - github.com/redpanda-data/connect/v4/internal/impl/a2a
+  - github.com/redpanda-data/connect/v4/internal/impl/amqp09
+  - github.com/redpanda-data/connect/v4/internal/impl/amqp1
+  - github.com/redpanda-data/connect/v4/internal/impl/avro
+  - github.com/redpanda-data/connect/v4/internal/impl/awk
+  - github.com/redpanda-data/connect/v4/internal/impl/aws
+  - github.com/redpanda-data/connect/v4/internal/impl/aws/config
+  - github.com/redpanda-data/connect/v4/internal/impl/azure
+  - github.com/redpanda-data/connect/v4/internal/impl/azure/cosmosdb
+  - github.com/redpanda-data/connect/v4/internal/impl/beanstalkd
+  - github.com/redpanda-data/connect/v4/internal/impl/cassandra
+  - github.com/redpanda-data/connect/v4/internal/impl/changelog
+  - github.com/redpanda-data/connect/v4/internal/impl/cockroachdb
+  - github.com/redpanda-data/connect/v4/internal/impl/cohere
+  - github.com/redpanda-data/connect/v4/internal/impl/confluent
+  - github.com/redpanda-data/connect/v4/internal/impl/confluent/sr
+  - github.com/redpanda-data/connect/v4/internal/impl/couchbase
+  - github.com/redpanda-data/connect/v4/internal/impl/couchbase/client
+  - github.com/redpanda-data/connect/v4/internal/impl/crypto
+  - github.com/redpanda-data/connect/v4/internal/impl/cyborgdb
+  - github.com/redpanda-data/connect/v4/internal/impl/cypher
+  - github.com/redpanda-data/connect/v4/internal/impl/dgraph
+  - github.com/redpanda-data/connect/v4/internal/impl/discord
+  - github.com/redpanda-data/connect/v4/internal/impl/elasticsearch/v8
+  - github.com/redpanda-data/connect/v4/internal/impl/ffi
+  - github.com/redpanda-data/connect/v4/internal/impl/ffi/impl
+  - github.com/redpanda-data/connect/v4/internal/impl/gateway
+  - github.com/redpanda-data/connect/v4/internal/impl/gcp
+  - github.com/redpanda-data/connect/v4/internal/impl/gcp/enterprise
+  - github.com/redpanda-data/connect/v4/internal/impl/gcp/enterprise/changestreams
+  - github.com/redpanda-data/connect/v4/internal/impl/gcp/enterprise/changestreams/changestreamstest
+  - github.com/redpanda-data/connect/v4/internal/impl/gcp/enterprise/changestreams/metadata
+  - github.com/redpanda-data/connect/v4/internal/impl/git
+  - github.com/redpanda-data/connect/v4/internal/impl/google
+  - github.com/redpanda-data/connect/v4/internal/impl/hdfs
+  - github.com/redpanda-data/connect/v4/internal/impl/html
+  - github.com/redpanda-data/connect/v4/internal/impl/influxdb
+  - github.com/redpanda-data/connect/v4/internal/impl/jaeger
+  - github.com/redpanda-data/connect/v4/internal/impl/javascript
+  - github.com/redpanda-data/connect/v4/internal/impl/jira
+  - github.com/redpanda-data/connect/v4/internal/impl/jira/jirahttp
+  - github.com/redpanda-data/connect/v4/internal/impl/jira/jirahttp/http_metrics
+  - github.com/redpanda-data/connect/v4/internal/impl/jsonpath
+  - github.com/redpanda-data/connect/v4/internal/impl/kafka
+  - github.com/redpanda-data/connect/v4/internal/impl/kafka/aws
+  - github.com/redpanda-data/connect/v4/internal/impl/kafka/enterprise
+  - github.com/redpanda-data/connect/v4/internal/impl/lang
+  - github.com/redpanda-data/connect/v4/internal/impl/maxmind
+  - github.com/redpanda-data/connect/v4/internal/impl/memcached
+  - github.com/redpanda-data/connect/v4/internal/impl/mongodb
+  - github.com/redpanda-data/connect/v4/internal/impl/mongodb/cdc
+  - github.com/redpanda-data/connect/v4/internal/impl/mqtt
+  - github.com/redpanda-data/connect/v4/internal/impl/msgpack
+  - github.com/redpanda-data/connect/v4/internal/impl/mssqlserver
+  - github.com/redpanda-data/connect/v4/internal/impl/mssqlserver/replication
+  - github.com/redpanda-data/connect/v4/internal/impl/mysql
+  - github.com/redpanda-data/connect/v4/internal/impl/nanomsg
+  - github.com/redpanda-data/connect/v4/internal/impl/nats
+  - github.com/redpanda-data/connect/v4/internal/impl/nsq
+  - github.com/redpanda-data/connect/v4/internal/impl/ockam
+  - github.com/redpanda-data/connect/v4/internal/impl/ollama
+  - github.com/redpanda-data/connect/v4/internal/impl/openai
+  - github.com/redpanda-data/connect/v4/internal/impl/opensearch
+  - github.com/redpanda-data/connect/v4/internal/impl/opensearch/aws
+  - github.com/redpanda-data/connect/v4/internal/impl/otlp
+  - github.com/redpanda-data/connect/v4/internal/impl/parquet
+  - github.com/redpanda-data/connect/v4/internal/impl/pinecone
+  - github.com/redpanda-data/connect/v4/internal/impl/postgresql
+  - github.com/redpanda-data/connect/v4/internal/impl/postgresql/aws
+  - github.com/redpanda-data/connect/v4/internal/impl/postgresql/pglogicalstream
+  - github.com/redpanda-data/connect/v4/internal/impl/postgresql/pglogicalstream/sanitize
+  - github.com/redpanda-data/connect/v4/internal/impl/prometheus
+  - github.com/redpanda-data/connect/v4/internal/impl/protobuf
+  - github.com/redpanda-data/connect/v4/internal/impl/protobuf/common
+  - github.com/redpanda-data/connect/v4/internal/impl/pulsar
+  - github.com/redpanda-data/connect/v4/internal/impl/pusher
+  - github.com/redpanda-data/connect/v4/internal/impl/qdrant
+  - github.com/redpanda-data/connect/v4/internal/impl/questdb
+  - github.com/redpanda-data/connect/v4/internal/impl/redis
+  - github.com/redpanda-data/connect/v4/internal/impl/redpanda
+  - github.com/redpanda-data/connect/v4/internal/impl/redpanda/migrator
+  - github.com/redpanda-data/connect/v4/internal/impl/redpanda/redpandatest
+  - github.com/redpanda-data/connect/v4/internal/impl/sentry
+  - github.com/redpanda-data/connect/v4/internal/impl/sftp
+  - github.com/redpanda-data/connect/v4/internal/impl/slack
+  - github.com/redpanda-data/connect/v4/internal/impl/snowflake
+  - github.com/redpanda-data/connect/v4/internal/impl/snowflake/streaming
+  - github.com/redpanda-data/connect/v4/internal/impl/snowflake/streaming/int128
+  - github.com/redpanda-data/connect/v4/internal/impl/spicedb
+  - github.com/redpanda-data/connect/v4/internal/impl/splunk
+  - github.com/redpanda-data/connect/v4/internal/impl/sql
+  - github.com/redpanda-data/connect/v4/internal/impl/statsd
+  - github.com/redpanda-data/connect/v4/internal/impl/text
+  - github.com/redpanda-data/connect/v4/internal/impl/tigerbeetle
+  - github.com/redpanda-data/connect/v4/internal/impl/timeplus
+  - github.com/redpanda-data/connect/v4/internal/impl/timeplus/driver
+  - github.com/redpanda-data/connect/v4/internal/impl/timeplus/http
+  - github.com/redpanda-data/connect/v4/internal/impl/twitter
+  - github.com/redpanda-data/connect/v4/internal/impl/wasm
+  - github.com/redpanda-data/connect/v4/internal/impl/xml
+  - github.com/redpanda-data/connect/v4/internal/impl/zeromq
+  - github.com/redpanda-data/connect/v4/internal/license
+  - github.com/redpanda-data/connect/v4/internal/mcp
+  - github.com/redpanda-data/connect/v4/internal/mcp/repository
+  - github.com/redpanda-data/connect/v4/internal/mcp/starlark
+  - github.com/redpanda-data/connect/v4/internal/mcp/tools
+  - github.com/redpanda-data/connect/v4/internal/plugins
+  - github.com/redpanda-data/connect/v4/internal/pool
+  - github.com/redpanda-data/connect/v4/internal/protoconnect
+  - github.com/redpanda-data/connect/v4/internal/protohealth
+  - github.com/redpanda-data/connect/v4/internal/retries
+  - github.com/redpanda-data/connect/v4/internal/rpcplugin
+  - github.com/redpanda-data/connect/v4/internal/rpcplugin/runtimepb
+  - github.com/redpanda-data/connect/v4/internal/rpcplugin/subprocess
+  - github.com/redpanda-data/connect/v4/internal/secrets
+  - github.com/redpanda-data/connect/v4/internal/serverless
+  - github.com/redpanda-data/connect/v4/internal/serviceaccount
+  - github.com/redpanda-data/connect/v4/internal/singleton
+  - github.com/redpanda-data/connect/v4/internal/telemetry
+  - github.com/redpanda-data/connect/v4/internal/template
+  - github.com/redpanda-data/connect/v4/internal/tracing
+  - github.com/redpanda-data/connect/v4/internal/typed
+  - github.com/redpanda-data/connect/v4/public/components/a2a
+  - github.com/redpanda-data/connect/v4/public/components/all
+  - github.com/redpanda-data/connect/v4/public/components/amqp09
+  - github.com/redpanda-data/connect/v4/public/components/amqp1
+  - github.com/redpanda-data/connect/v4/public/components/avro
+  - github.com/redpanda-data/connect/v4/public/components/aws
+  - github.com/redpanda-data/connect/v4/public/components/azure
+  - github.com/redpanda-data/connect/v4/public/components/beanstalkd
+  - github.com/redpanda-data/connect/v4/public/components/cassandra
+  - github.com/redpanda-data/connect/v4/public/components/changelog
+  - github.com/redpanda-data/connect/v4/public/components/cloud
+  - github.com/redpanda-data/connect/v4/public/components/cockroachdb
+  - github.com/redpanda-data/connect/v4/public/components/cohere
+  - github.com/redpanda-data/connect/v4/public/components/community
+  - github.com/redpanda-data/connect/v4/public/components/confluent
+  - github.com/redpanda-data/connect/v4/public/components/couchbase
+  - github.com/redpanda-data/connect/v4/public/components/crypto
+  - github.com/redpanda-data/connect/v4/public/components/cyborgdb
+  - github.com/redpanda-data/connect/v4/public/components/cypher
+  - github.com/redpanda-data/connect/v4/public/components/dgraph
+  - github.com/redpanda-data/connect/v4/public/components/discord
+  - github.com/redpanda-data/connect/v4/public/components/elasticsearch/v8
+  - github.com/redpanda-data/connect/v4/public/components/ffi
+  - github.com/redpanda-data/connect/v4/public/components/gateway
+  - github.com/redpanda-data/connect/v4/public/components/gcp
+  - github.com/redpanda-data/connect/v4/public/components/gcp/enterprise
+  - github.com/redpanda-data/connect/v4/public/components/git
+  - github.com/redpanda-data/connect/v4/public/components/google
+  - github.com/redpanda-data/connect/v4/public/components/hdfs
+  - github.com/redpanda-data/connect/v4/public/components/influxdb
+  - github.com/redpanda-data/connect/v4/public/components/io
+  - github.com/redpanda-data/connect/v4/public/components/jaeger
+  - github.com/redpanda-data/connect/v4/public/components/javascript
+  - github.com/redpanda-data/connect/v4/public/components/jira
+  - github.com/redpanda-data/connect/v4/public/components/kafka
+  - github.com/redpanda-data/connect/v4/public/components/kafka/enterprise
+  - github.com/redpanda-data/connect/v4/public/components/maxmind
+  - github.com/redpanda-data/connect/v4/public/components/memcached
+  - github.com/redpanda-data/connect/v4/public/components/mongodb
+  - github.com/redpanda-data/connect/v4/public/components/mongodb/enterprise
+  - github.com/redpanda-data/connect/v4/public/components/mqtt
+  - github.com/redpanda-data/connect/v4/public/components/msgpack
+  - github.com/redpanda-data/connect/v4/public/components/mssqlserver
+  - github.com/redpanda-data/connect/v4/public/components/mysql
+  - github.com/redpanda-data/connect/v4/public/components/nanomsg
+  - github.com/redpanda-data/connect/v4/public/components/nats
+  - github.com/redpanda-data/connect/v4/public/components/nsq
+  - github.com/redpanda-data/connect/v4/public/components/ockam
+  - github.com/redpanda-data/connect/v4/public/components/ollama
+  - github.com/redpanda-data/connect/v4/public/components/openai
+  - github.com/redpanda-data/connect/v4/public/components/opensearch
+  - github.com/redpanda-data/connect/v4/public/components/otlp
+  - github.com/redpanda-data/connect/v4/public/components/pinecone
+  - github.com/redpanda-data/connect/v4/public/components/postgresql
+  - github.com/redpanda-data/connect/v4/public/components/prometheus
+  - github.com/redpanda-data/connect/v4/public/components/pulsar
+  - github.com/redpanda-data/connect/v4/public/components/pure
+  - github.com/redpanda-data/connect/v4/public/components/pure/extended
+  - github.com/redpanda-data/connect/v4/public/components/pusher
+  - github.com/redpanda-data/connect/v4/public/components/qdrant
+  - github.com/redpanda-data/connect/v4/public/components/questdb
+  - github.com/redpanda-data/connect/v4/public/components/redis
+  - github.com/redpanda-data/connect/v4/public/components/redpanda
+  - github.com/redpanda-data/connect/v4/public/components/sentry
+  - github.com/redpanda-data/connect/v4/public/components/sftp
+  - github.com/redpanda-data/connect/v4/public/components/slack
+  - github.com/redpanda-data/connect/v4/public/components/snowflake
+  - github.com/redpanda-data/connect/v4/public/components/spicedb
+  - github.com/redpanda-data/connect/v4/public/components/splunk
+  - github.com/redpanda-data/connect/v4/public/components/sql
+  - github.com/redpanda-data/connect/v4/public/components/sql/base
+  - github.com/redpanda-data/connect/v4/public/components/statsd
+  - github.com/redpanda-data/connect/v4/public/components/text
+  - github.com/redpanda-data/connect/v4/public/components/tigerbeetle
+  - github.com/redpanda-data/connect/v4/public/components/timeplus
+  - github.com/redpanda-data/connect/v4/public/components/twitter
+  - github.com/redpanda-data/connect/v4/public/components/wasm
+  - github.com/redpanda-data/connect/v4/public/components/zeromq
+  - github.com/redpanda-data/connect/v4/public/plugin/go/rpcn
+  - github.com/redpanda-data/connect/v4/public/schema
+  - github.com/redpanda-data/redpanda/src/transform-sdk/go/transform
+  - github.com/rivo/uniseg
+  - github.com/rs/xid
+  - github.com/rs/xid v1.6.0
+  - github.com/sashabaranov/go-openai
+  - github.com/sashabaranov/go-openai v1.41.2
+  - github.com/sashabaranov/go-openai/jsonschema
+  - github.com/segmentio/encoding/thrift
+  - github.com/sijms/go-ora/v2 v2.9.0
+  - github.com/slack-go/slack
+  - github.com/slack-go/slack v0.17.3
+  - github.com/slack-go/slack/socketmode
+  - github.com/smira/go-statsd
+  - github.com/smira/go-statsd v1.3.4
+  - github.com/snowflakedb/gosnowflake
+  - github.com/snowflakedb/gosnowflake v1.17.0
+  - github.com/sourcegraph/conc v0.3.0
+  - github.com/sourcegraph/conc/pool
+  - github.com/stretchr/testify v1.11.1
+  - github.com/stretchr/testify/assert
+  - github.com/stretchr/testify/mock
+  - github.com/stretchr/testify/require
+  - github.com/stretchr/testify/suite
+  - github.com/testcontainers/testcontainers-go/modules/mongodb
+  - github.com/testcontainers/testcontainers-go/modules/ollama
+  - github.com/testcontainers/testcontainers-go/modules/ollama v0.39.0
+  - github.com/testcontainers/testcontainers-go/modules/qdrant
+  - github.com/testcontainers/testcontainers-go/modules/qdrant v0.39.0
+  - github.com/tetratelabs/wazero
+  - github.com/tetratelabs/wazero v1.9.0
+  - github.com/tetratelabs/wazero/api
+  - github.com/tetratelabs/wazero/imports/wasi_snapshot_preview1
+  - github.com/tetratelabs/wazero/sys
+  - github.com/tigerbeetle/tigerbeetle-go
+  - github.com/tigerbeetle/tigerbeetle-go v0.16.61
+  - github.com/tigerbeetle/tigerbeetle-go/pkg/types
+  - github.com/timeplus-io/proton-go-driver/v2
+  - github.com/timeplus-io/proton-go-driver/v2 v2.1.2
+  - github.com/tmc/langchaingo v0.1.13
+  - github.com/tmc/langchaingo/textsplitter
+  - github.com/trinodb/trino-go-client v0.330.0
+  - github.com/twmb/franz-go v1.20.5
+  - github.com/twmb/franz-go/pkg/kadm
+  - github.com/twmb/franz-go/pkg/kadm v1.17.1
+  - github.com/twmb/franz-go/pkg/kerr
+  - github.com/twmb/franz-go/pkg/kfake
+  - github.com/twmb/franz-go/pkg/kfake v0.0.0-20251115002817-3affad808a82
+  - github.com/twmb/franz-go/pkg/kgo
+  - github.com/twmb/franz-go/pkg/kmsg
+  - github.com/twmb/franz-go/pkg/kmsg v1.12.0
+  - github.com/twmb/franz-go/pkg/sasl
+  - github.com/twmb/franz-go/pkg/sasl/aws
+  - github.com/twmb/franz-go/pkg/sasl/oauth
+  - github.com/twmb/franz-go/pkg/sasl/plain
+  - github.com/twmb/franz-go/pkg/sasl/scram
+  - github.com/twmb/franz-go/pkg/sr
+  - github.com/twmb/franz-go/pkg/sr v1.5.0
+  - github.com/twmb/go-cache v1.2.1
+  - github.com/twmb/go-cache/cache
+  - github.com/urfave/cli/v2
+  - github.com/vmihailenco/msgpack/v5
+  - github.com/vmihailenco/msgpack/v5 v5.4.1
+  - github.com/xdg-go/scram
+  - github.com/xdg-go/scram v1.1.2
+  - github.com/xeipuuv/gojsonschema
+  - github.com/xeipuuv/gojsonschema v1.2.0
+  - github.com/xitongsys/parquet-go v1.6.2
+  - github.com/xitongsys/parquet-go-source v0.0.0-20241021075129-b732d2ac9c9b
+  - github.com/xitongsys/parquet-go-source/buffer
+  - github.com/xitongsys/parquet-go/parquet
+  - github.com/xitongsys/parquet-go/reader
+  - github.com/xitongsys/parquet-go/writer
+  - github.com/youmark/pkcs8
+  - github.com/youmark/pkcs8 v0.0.0-20240726163527-a2c0da244d78
+  - go.mongodb.org/mongo-driver/v2 v2.3.1
+  - go.mongodb.org/mongo-driver/v2/bson
+  - go.mongodb.org/mongo-driver/v2/mongo
+  - go.mongodb.org/mongo-driver/v2/mongo/options
+  - go.mongodb.org/mongo-driver/v2/mongo/writeconcern
+  - go.nanomsg.org/mangos/v3
+  - go.nanomsg.org/mangos/v3 v3.4.2
+  - go.nanomsg.org/mangos/v3/protocol/pub
+  - go.nanomsg.org/mangos/v3/protocol/pull
+  - go.nanomsg.org/mangos/v3/protocol/push
+  - go.nanomsg.org/mangos/v3/protocol/sub
+  - go.nanomsg.org/mangos/v3/transport/all
+  - go.opentelemetry.io/otel
+  - go.opentelemetry.io/otel v1.38.0
+  - go.opentelemetry.io/otel/attribute
+  - go.opentelemetry.io/otel/exporters/jaeger
+  - go.opentelemetry.io/otel/exporters/jaeger v1.17.0
+  - go.opentelemetry.io/otel/exporters/otlp/otlptrace
+  - go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.38.0
+  - go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc
+  - go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc v1.38.0
+  - go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp
+  - go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp v1.38.0
+  - go.opentelemetry.io/otel/propagation
+  - go.opentelemetry.io/otel/sdk v1.38.0
+  - go.opentelemetry.io/otel/sdk/resource
+  - go.opentelemetry.io/otel/sdk/trace
+  - go.opentelemetry.io/otel/sdk/trace/tracetest
+  - go.opentelemetry.io/otel/semconv/v1.7.0
+  - go.opentelemetry.io/otel/semconv/v1.9.0
+  - go.opentelemetry.io/otel/trace
+  - go.opentelemetry.io/otel/trace v1.38.0
+  - go.opentelemetry.io/otel/trace/noop
+  - go.starlark.net v0.0.0-20250318223901-d9371fef63fe
+  - go.starlark.net/lib/json
+  - go.starlark.net/starlark
+  - go.starlark.net/syntax
+  - go.uber.org/multierr
+  - go.uber.org/multierr v1.11.0
+  - google.golang.org/api v0.252.0
+  - google.golang.org/api/drive/v3
+  - google.golang.org/api/drivelabels/v2
+  - google.golang.org/api/googleapi
+  - google.golang.org/api/iterator
+  - google.golang.org/api/option
+  - google.golang.org/genai
+  - google.golang.org/grpc
+  - google.golang.org/grpc/codes
+  - google.golang.org/grpc/credentials
+  - google.golang.org/grpc/credentials/insecure
+  - google.golang.org/grpc/health/grpc_health_v1
+  - google.golang.org/grpc/reflection
+  - google.golang.org/grpc/status
+  - google.golang.org/protobuf v1.36.10
+  - google.golang.org/protobuf/encoding/protojson
+  - google.golang.org/protobuf/encoding/prototext
+  - google.golang.org/protobuf/proto
+  - google.golang.org/protobuf/reflect/protodesc
+  - google.golang.org/protobuf/reflect/protoreflect
+  - google.golang.org/protobuf/reflect/protoregistry
+  - google.golang.org/protobuf/runtime/protoimpl
+  - google.golang.org/protobuf/types/descriptorpb
+  - google.golang.org/protobuf/types/dynamicpb
+  - google.golang.org/protobuf/types/known/durationpb
+  - google.golang.org/protobuf/types/known/structpb
+  - google.golang.org/protobuf/types/known/timestamppb
+  - google/protobuf/timestamp.proto
+  - gopkg.in/yaml.v3
+  - modernc.org/sqlite
+  - modernc.org/sqlite v1.39.1
+  - stuffs/thething.proto
+project_analysis:
+  dependencies_from_code: 611
+  dependencies_from_go_mod: 170
+  has_go_mod: true
+  standard_library_deps: 95
+  third_party_deps: 686
+  total_dependencies: 781
