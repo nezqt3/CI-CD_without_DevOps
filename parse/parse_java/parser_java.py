@@ -152,7 +152,7 @@ class ParserJava:
         return result
 
     # 6. Сохранение YAML
-    def save_yaml(self, data, output=".dependencies/repo_data.yaml"):
+    def save_yaml(self, data, output="dependencies/repo_data.yaml"):
         with open(output, "w", encoding="utf-8") as f:
             yaml.dump(data, f, sort_keys=False, allow_unicode=True)
         print(f"YAML сохранён → {output}")

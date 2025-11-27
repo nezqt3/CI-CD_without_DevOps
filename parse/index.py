@@ -2,9 +2,16 @@ from parse_python.autogen_env import parse_github_url, get_dependencies, write_e
 from parse_javascript.parser_javascript import ParserJavaScript
 from parse_java.parser_java import ParserJava
 from parse_go.autogen_env_go import parse_github_url, get_go_dependencies, write_go_mod, generate_gitlab_ci
-from enums.languages import Languages
+import os
+import sys
 import argparse
 from get_using_languages import Language
+
+parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+
+# добавляем папку в sys.path
+sys.path.insert(0, parent_dir)
+from enums.languages import Languages
 
 class Main:
     def __init__(self, path):

@@ -72,7 +72,7 @@ def get_dependencies(owner, repo):
     return clean
 
 
-def write_env_yml(deps: list, out_file=".dependencies/environment.yml"):
+def write_env_yml(deps: list, out_file="dependencies/environment.yml"):
     env = {
         "name": "auto_env",
         "dependencies": [
