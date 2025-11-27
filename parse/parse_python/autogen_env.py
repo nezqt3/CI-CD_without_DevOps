@@ -31,6 +31,7 @@ def is_python_package(name: str) -> bool:
 
 
 def get_dependencies(owner, repo):
+    print(owner, repo)
     headers = {
         "Accept": "application/vnd.github+json",
         "Authorization": f"Bearer {GITHUB_TOKEN}",

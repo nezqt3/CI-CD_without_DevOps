@@ -1,236 +1,233 @@
-module github.com/milvus-io/milvus-autogen
+module github.com/go-gitea/gitea-autogen
 go 1.20
 require (
-	github.com/99designs/go-keychain v0.0.0-0
-	github.com/99designs/keyring v0.0.0-0
-	github.com/AthenZ/athenz v0.0.0-0
+	github.com/42wim/httpsig v0.0.0-0
+	github.com/42wim/sshsig v0.0.0-0
+	github.com/6543/go-version v0.0.0-0
 	github.com/Azure/azure-sdk-for-go/sdk/azcore v0.0.0-0
-	github.com/Azure/azure-sdk-for-go/sdk/azidentity v0.0.0-0
 	github.com/Azure/azure-sdk-for-go/sdk/internal v0.0.0-0
 	github.com/Azure/azure-sdk-for-go/sdk/storage/azblob v0.0.0-0
-	github.com/AzureAD/microsoft-authentication-library-for-go v0.0.0-0
+	github.com/Azure/go-ntlmssp v0.0.0-0
 	github.com/DataDog/zstd v0.0.0-0
-	github.com/GoogleCloudPlatform/opentelemetry-operations-go/detectors/gcp v0.0.0-0
-	github.com/GoogleCloudPlatform/opentelemetry-operations-go/exporter/metric v0.0.0-0
-	github.com/GoogleCloudPlatform/opentelemetry-operations-go/internal/resourcemapping v0.0.0-0
-	github.com/JohnCGriffin/overflow v0.0.0-0
-	github.com/Knetic/govaluate v0.0.0-0
-	github.com/SimFG/expr v0.0.0-0
-	github.com/StackExchange/wmi v0.0.0-0
-	github.com/alibabacloud-go/debug v0.0.0-0
-	github.com/alibabacloud-go/tea v0.0.0-0
-	github.com/aliyun/credentials-go v0.0.0-0
+	github.com/Microsoft/go-winio v0.0.0-0
+	github.com/Necoro/html2text v0.0.0-0
+	github.com/ProtonMail/go-crypto v0.0.0-0
+	github.com/PuerkitoBio/goquery v0.0.0-0
+	github.com/RoaringBitmap/roaring/v2 v0.0.0-0
+	github.com/STARRY-S/zip v0.0.0-0
+	github.com/SaveTheRbtz/zstd-seekable-format-go/pkg v0.0.0-0
+	github.com/alecthomas/chroma/v2 v0.0.0-0
 	github.com/andybalholm/brotli v0.0.0-0
-	github.com/antlr4-go/antlr/v4 v0.0.0-0
-	github.com/apache/pulsar-client-go v0.0.0-0
-	github.com/apache/thrift v0.0.0-0
-	github.com/ardielle/ardielle-go v0.0.0-0
+	github.com/andybalholm/cascadia v0.0.0-0
+	github.com/anmitsu/go-shlex v0.0.0-0
 	github.com/aws/aws-sdk-go-v2 v0.0.0-0
-	github.com/aws/aws-sdk-go-v2/aws/protocol/eventstream v0.0.0-0
-	github.com/aws/aws-sdk-go-v2/config v0.0.0-0
 	github.com/aws/aws-sdk-go-v2/credentials v0.0.0-0
-	github.com/aws/aws-sdk-go-v2/feature/ec2/imds v0.0.0-0
 	github.com/aws/aws-sdk-go-v2/internal/configsources v0.0.0-0
 	github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 v0.0.0-0
-	github.com/aws/aws-sdk-go-v2/internal/ini v0.0.0-0
-	github.com/aws/aws-sdk-go-v2/service/bedrockruntime v0.0.0-0
-	github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding v0.0.0-0
-	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v0.0.0-0
-	github.com/aws/aws-sdk-go-v2/service/sso v0.0.0-0
-	github.com/aws/aws-sdk-go-v2/service/ssooidc v0.0.0-0
-	github.com/aws/aws-sdk-go-v2/service/sts v0.0.0-0
+	github.com/aws/aws-sdk-go-v2/service/codecommit v0.0.0-0
 	github.com/aws/smithy-go v0.0.0-0
-	github.com/benesch/cgosymbolizer v0.0.0-0
+	github.com/aymerick/douceur v0.0.0-0
 	github.com/beorn7/perks v0.0.0-0
 	github.com/bits-and-blooms/bitset v0.0.0-0
-	github.com/bits-and-blooms/bloom/v3 v0.0.0-0
-	github.com/blang/semver/v4 v0.0.0-0
-	github.com/bytedance/mockey v0.0.0-0
-	github.com/bytedance/sonic v0.0.0-0
-	github.com/bytedance/sonic/loader v0.0.0-0
-	github.com/campoy/embedmd v0.0.0-0
-	github.com/casbin/casbin/v2 v0.0.0-0
-	github.com/casbin/json-adapter/v2 v0.0.0-0
-	github.com/cenkalti/backoff/v4 v0.0.0-0
+	github.com/blakesmith/ar v0.0.0-0
+	github.com/blevesearch/bleve/v2 v0.0.0-0
+	github.com/blevesearch/bleve_index_api v0.0.0-0
+	github.com/blevesearch/geo v0.0.0-0
+	github.com/blevesearch/go-faiss v0.0.0-0
+	github.com/blevesearch/go-porterstemmer v0.0.0-0
+	github.com/blevesearch/gtreap v0.0.0-0
+	github.com/blevesearch/mmap-go v0.0.0-0
+	github.com/blevesearch/scorch_segment_api/v2 v0.0.0-0
+	github.com/blevesearch/segment v0.0.0-0
+	github.com/blevesearch/snowballstem v0.0.0-0
+	github.com/blevesearch/upsidedown_store_api v0.0.0-0
+	github.com/blevesearch/vellum v0.0.0-0
+	github.com/blevesearch/zapx/v11 v0.0.0-0
+	github.com/blevesearch/zapx/v12 v0.0.0-0
+	github.com/blevesearch/zapx/v13 v0.0.0-0
+	github.com/blevesearch/zapx/v14 v0.0.0-0
+	github.com/blevesearch/zapx/v15 v0.0.0-0
+	github.com/blevesearch/zapx/v16 v0.0.0-0
+	github.com/bmatcuk/doublestar/v4 v0.0.0-0
+	github.com/bodgit/plumbing v0.0.0-0
+	github.com/bodgit/sevenzip v0.0.0-0
+	github.com/bodgit/windows v0.0.0-0
+	github.com/bohde/codel v0.0.0-0
+	github.com/boombuler/barcode v0.0.0-0
+	github.com/bradfitz/gomemcache v0.0.0-0
+	github.com/buildkite/terminal-to-html/v3 v0.0.0-0
+	github.com/caddyserver/certmagic v0.0.0-0
+	github.com/caddyserver/zerossl v0.0.0-0
+	github.com/cention-sany/utf7 v0.0.0-0
 	github.com/cespare/xxhash/v2 v0.0.0-0
-	github.com/cilium/ebpf v0.0.0-0
-	github.com/cloudwego/base64x v0.0.0-0
-	github.com/cncf/xds/go v0.0.0-0
-	github.com/cockroachdb/errors v0.0.0-0
-	github.com/cockroachdb/logtags v0.0.0-0
-	github.com/cockroachdb/redact v0.0.0-0
-	github.com/confluentinc/confluent-kafka-go v0.0.0-0
-	github.com/containerd/cgroups/v3 v0.0.0-0
-	github.com/coreos/go-semver v0.0.0-0
-	github.com/coreos/go-systemd/v22 v0.0.0-0
-	github.com/cznic/mathutil v0.0.0-0
-	github.com/danieljoos/wincred v0.0.0-0
-	github.com/dave/jennifer v0.0.0-0
+	github.com/charmbracelet/git-lfs-transfer v0.0.0-0
+	github.com/chi-middleware/proxy v0.0.0-0
+	github.com/cloudflare/circl v0.0.0-0
+	github.com/couchbase/go-couchbase v0.0.0-0
+	github.com/couchbase/gomemcached v0.0.0-0
+	github.com/couchbase/goutils v0.0.0-0
+	github.com/cpuguy83/go-md2man/v2 v0.0.0-0
+	github.com/cyphar/filepath-securejoin v0.0.0-0
 	github.com/davecgh/go-spew v0.0.0-0
-	github.com/dgryski/go-farm v0.0.0-0
-	github.com/docker/go-units v0.0.0-0
+	github.com/davidmz/go-pageant v0.0.0-0
+	github.com/dgryski/go-rendezvous v0.0.0-0
+	github.com/dimiro1/reply v0.0.0-0
+	github.com/djherbis/buffer v0.0.0-0
+	github.com/djherbis/nio/v3 v0.0.0-0
+	github.com/dlclark/regexp2 v0.0.0-0
+	github.com/dsnet/compress v0.0.0-0
 	github.com/dustin/go-humanize v0.0.0-0
-	github.com/dvsekhvalnov/jose2go v0.0.0-0
-	github.com/ebitengine/purego v0.0.0-0
-	github.com/envoyproxy/go-control-plane/envoy v0.0.0-0
-	github.com/envoyproxy/protoc-gen-validate v0.0.0-0
-	github.com/facebookgo/ensure v0.0.0-0
-	github.com/facebookgo/stack v0.0.0-0
-	github.com/facebookgo/subset v0.0.0-0
+	github.com/editorconfig/editorconfig-core-go/v2 v0.0.0-0
+	github.com/emersion/go-imap v0.0.0-0
+	github.com/emersion/go-sasl v0.0.0-0
+	github.com/emirpasic/gods v0.0.0-0
+	github.com/ethantkoenig/rupture v0.0.0-0
 	github.com/fatih/color v0.0.0-0
-	github.com/felixge/httpsnoop v0.0.0-0
-	github.com/form3tech-oss/jwt-go v0.0.0-0
+	github.com/felixge/fgprof v0.0.0-0
 	github.com/fsnotify/fsnotify v0.0.0-0
 	github.com/fxamacker/cbor/v2 v0.0.0-0
-	github.com/gabriel-vasile/mimetype v0.0.0-0
-	github.com/getsentry/sentry-go v0.0.0-0
-	github.com/gin-contrib/sse v0.0.0-0
-	github.com/gin-gonic/gin v0.0.0-0
-	github.com/git-hooks/git-hooks v0.0.0-0
+	github.com/git-lfs/pktline v0.0.0-0
+	github.com/gliderlabs/ssh v0.0.0-0
+	github.com/go-ap/activitypub v0.0.0-0
+	github.com/go-ap/errors v0.0.0-0
+	github.com/go-ap/jsonld v0.0.0-0
+	github.com/go-asn1-ber/asn1-ber v0.0.0-0
+	github.com/go-chi/chi/v5 v0.0.0-0
+	github.com/go-chi/cors v0.0.0-0
+	github.com/go-co-op/gocron v0.0.0-0
+	github.com/go-enry/go-enry/v2 v0.0.0-0
+	github.com/go-enry/go-oniguruma v0.0.0-0
+	github.com/go-fed/httpsig v0.0.0-0
+	github.com/go-git/gcfg v0.0.0-0
+	github.com/go-git/go-billy/v5 v0.0.0-0
+	github.com/go-git/go-git/v5 v0.0.0-0
 	github.com/go-ini/ini v0.0.0-0
-	github.com/go-jose/go-jose/v4 v0.0.0-0
-	github.com/go-logr/logr v0.0.0-0
-	github.com/go-logr/stdr v0.0.0-0
-	github.com/go-ole/go-ole v0.0.0-0
-	github.com/go-playground/locales v0.0.0-0
-	github.com/go-playground/universal-translator v0.0.0-0
-	github.com/go-playground/validator/v10 v0.0.0-0
+	github.com/go-ldap/ldap/v3 v0.0.0-0
+	github.com/go-redsync/redsync/v4 v0.0.0-0
+	github.com/go-sql-driver/mysql v0.0.0-0
+	github.com/go-webauthn/webauthn v0.0.0-0
+	github.com/go-webauthn/x v0.0.0-0
 	github.com/goccy/go-json v0.0.0-0
-	github.com/goccy/go-yaml v0.0.0-0
-	github.com/godbus/dbus v0.0.0-0
-	github.com/godbus/dbus/v5 v0.0.0-0
-	github.com/gofrs/flock v0.0.0-0
-	github.com/gogo/protobuf v0.0.0-0
+	github.com/gogs/chardet v0.0.0-0
+	github.com/gogs/go-gogs-client v0.0.0-0
 	github.com/golang-jwt/jwt/v4 v0.0.0-0
 	github.com/golang-jwt/jwt/v5 v0.0.0-0
+	github.com/golang-sql/civil v0.0.0-0
+	github.com/golang-sql/sqlexp v0.0.0-0
+	github.com/golang/groupcache v0.0.0-0
 	github.com/golang/protobuf v0.0.0-0
 	github.com/golang/snappy v0.0.0-0
 	github.com/google/btree v0.0.0-0
 	github.com/google/flatbuffers v0.0.0-0
-	github.com/google/gofuzz v0.0.0-0
-	github.com/google/s2a-go v0.0.0-0
-	github.com/google/shlex v0.0.0-0
+	github.com/google/go-github/v74 v0.0.0-0
+	github.com/google/go-querystring v0.0.0-0
+	github.com/google/go-tpm v0.0.0-0
+	github.com/google/licenseclassifier/v2 v0.0.0-0
+	github.com/google/pprof v0.0.0-0
 	github.com/google/uuid v0.0.0-0
-	github.com/googleapis/enterprise-certificate-proxy v0.0.0-0
-	github.com/googleapis/gax-go/v2 v0.0.0-0
-	github.com/gopherjs/gopherjs v0.0.0-0
-	github.com/gorilla/websocket v0.0.0-0
-	github.com/grpc-ecosystem/go-grpc-middleware v0.0.0-0
-	github.com/grpc-ecosystem/go-grpc-prometheus v0.0.0-0
-	github.com/grpc-ecosystem/grpc-gateway v0.0.0-0
-	github.com/grpc-ecosystem/grpc-gateway/v2 v0.0.0-0
-	github.com/gsterjov/go-libsecret v0.0.0-0
-	github.com/hamba/avro/v2 v0.0.0-0
-	github.com/hashicorp/go-syslog v0.0.0-0
+	github.com/gorilla/css v0.0.0-0
+	github.com/gorilla/feeds v0.0.0-0
+	github.com/gorilla/mux v0.0.0-0
+	github.com/gorilla/securecookie v0.0.0-0
+	github.com/gorilla/sessions v0.0.0-0
+	github.com/hashicorp/errwrap v0.0.0-0
+	github.com/hashicorp/go-cleanhttp v0.0.0-0
+	github.com/hashicorp/go-multierror v0.0.0-0
+	github.com/hashicorp/go-retryablehttp v0.0.0-0
 	github.com/hashicorp/golang-lru/v2 v0.0.0-0
-	github.com/hashicorp/hcl v0.0.0-0
-	github.com/huaweicloud/huaweicloud-sdk-go-v3 v0.0.0-0
-	github.com/jolestar/go-commons-pool/v2 v0.0.0-0
-	github.com/jonboulle/clockwork v0.0.0-0
+	github.com/huandu/xstrings v0.0.0-0
+	github.com/jbenet/go-context v0.0.0-0
+	github.com/jhillyerd/enmime v0.0.0-0
+	github.com/josharian/intern v0.0.0-0
 	github.com/json-iterator/go v0.0.0-0
-	github.com/jtolds/gls v0.0.0-0
-	github.com/klauspost/asmfmt v0.0.0-0
+	github.com/kballard/go-shellquote v0.0.0-0
+	github.com/kevinburke/ssh_config v0.0.0-0
 	github.com/klauspost/compress v0.0.0-0
 	github.com/klauspost/cpuid/v2 v0.0.0-0
-	github.com/kr/pretty v0.0.0-0
-	github.com/kr/text v0.0.0-0
-	github.com/kylelemons/godebug v0.0.0-0
-	github.com/labstack/gommon v0.0.0-0
-	github.com/leodido/go-urn v0.0.0-0
-	github.com/lufia/plan9stats v0.0.0-0
-	github.com/magiconair/properties v0.0.0-0
+	github.com/klauspost/pgzip v0.0.0-0
+	github.com/lib/pq v0.0.0-0
+	github.com/libdns/libdns v0.0.0-0
+	github.com/mailru/easyjson v0.0.0-0
+	github.com/markbates/going v0.0.0-0
+	github.com/markbates/goth v0.0.0-0
 	github.com/mattn/go-colorable v0.0.0-0
 	github.com/mattn/go-isatty v0.0.0-0
 	github.com/mattn/go-runewidth v0.0.0-0
-	github.com/mgechev/revive v0.0.0-0
-	github.com/mgutz/ansi v0.0.0-0
-	github.com/milvus-io/arrow/go/v17 v0.0.0-0
-	github.com/milvus-io/blobloom v0.0.0-0
-	github.com/milvus-io/cgosymbolizer v0.0.0-0
-	github.com/milvus-io/gorocksdb v0.0.0-0
-	github.com/milvus-io/milvus-proto/go-api/v2 v0.0.0-0
-	github.com/milvus-io/milvus/pkg/v2 v0.0.0-0
-	github.com/minio/asm2plan9s v0.0.0-0
-	github.com/minio/c2goasm v0.0.0-0
+	github.com/mattn/go-shellwords v0.0.0-0
+	github.com/mattn/go-sqlite3 v0.0.0-0
+	github.com/meilisearch/meilisearch-go v0.0.0-0
+	github.com/mholt/acmez/v3 v0.0.0-0
+	github.com/mholt/archives v0.0.0-0
+	github.com/microcosm-cc/bluemonday v0.0.0-0
+	github.com/microsoft/go-mssqldb v0.0.0-0
+	github.com/miekg/dns v0.0.0-0
+	github.com/mikelolasagasti/xz v0.0.0-0
+	github.com/minio/crc64nvme v0.0.0-0
 	github.com/minio/md5-simd v0.0.0-0
 	github.com/minio/minio-go/v7 v0.0.0-0
+	github.com/minio/minlz v0.0.0-0
 	github.com/mitchellh/mapstructure v0.0.0-0
 	github.com/modern-go/concurrent v0.0.0-0
 	github.com/modern-go/reflect2 v0.0.0-0
-	github.com/mtibben/percent v0.0.0-0
+	github.com/mrjones/oauth v0.0.0-0
+	github.com/mschoch/smat v0.0.0-0
+	github.com/msteinert/pam v0.0.0-0
 	github.com/munnerz/goautoneg v0.0.0-0
-	github.com/opencontainers/runtime-spec v0.0.0-0
-	github.com/opentracing/opentracing-go v0.0.0-0
-	github.com/panjf2000/ants/v2 v0.0.0-0
-	github.com/pelletier/go-toml v0.0.0-0
-	github.com/pelletier/go-toml/v2 v0.0.0-0
-	github.com/peterstace/simplefeatures v0.0.0-0
+	github.com/niklasfasching/go-org v0.0.0-0
+	github.com/nwaples/rardecode/v2 v0.0.0-0
+	github.com/olekukonko/cat v0.0.0-0
+	github.com/olekukonko/errors v0.0.0-0
+	github.com/olekukonko/ll v0.0.0-0
+	github.com/olekukonko/tablewriter v0.0.0-0
+	github.com/olivere/elastic/v7 v0.0.0-0
+	github.com/onsi/ginkgo v0.0.0-0
+	github.com/opencontainers/go-digest v0.0.0-0
+	github.com/opencontainers/image-spec v0.0.0-0
+	github.com/philhofer/fwd v0.0.0-0
 	github.com/pierrec/lz4/v4 v0.0.0-0
-	github.com/pingcap/errors v0.0.0-0
-	github.com/pingcap/failpoint v0.0.0-0
-	github.com/pingcap/goleveldb v0.0.0-0
-	github.com/pingcap/kvproto v0.0.0-0
-	github.com/pingcap/log v0.0.0-0
-	github.com/pkg/browser v0.0.0-0
+	github.com/pjbgf/sha1cd v0.0.0-0
 	github.com/pkg/errors v0.0.0-0
-	github.com/planetscale/vtprotobuf v0.0.0-0
 	github.com/pmezard/go-difflib v0.0.0-0
-	github.com/power-devops/perfstat v0.0.0-0
+	github.com/pquerna/otp v0.0.0-0
 	github.com/prometheus/client_golang v0.0.0-0
 	github.com/prometheus/client_model v0.0.0-0
 	github.com/prometheus/common v0.0.0-0
 	github.com/prometheus/procfs v0.0.0-0
-	github.com/quasilyte/go-ruleguard/dsl v0.0.0-0
-	github.com/rcrowley/go-metrics v0.0.0-0
-	github.com/remeh/sizedwaitgroup v0.0.0-0
-	github.com/remyoudompheng/bigfft v0.0.0-0
-	github.com/rogpeppe/go-internal v0.0.0-0
+	github.com/quasoft/websspi v0.0.0-0
+	github.com/redis/go-redis/v9 v0.0.0-0
+	github.com/rhysd/actionlint v0.0.0-0
+	github.com/rivo/uniseg v0.0.0-0
+	github.com/robfig/cron/v3 v0.0.0-0
 	github.com/rs/xid v0.0.0-0
 	github.com/russross/blackfriday/v2 v0.0.0-0
-	github.com/samber/lo v0.0.0-0
-	github.com/sbinet/npyio v0.0.0-0
-	github.com/shirou/gopsutil v0.0.0-0
-	github.com/shirou/gopsutil/v3 v0.0.0-0
-	github.com/shirou/gopsutil/v4 v0.0.0-0
-	github.com/shoenig/go-m1cpu v0.0.0-0
+	github.com/santhosh-tekuri/jsonschema/v5 v0.0.0-0
+	github.com/sassoftware/go-rpmutils v0.0.0-0
+	github.com/sergi/go-diff v0.0.0-0
 	github.com/sirupsen/logrus v0.0.0-0
-	github.com/smartystreets/assertions v0.0.0-0
-	github.com/smartystreets/goconvey v0.0.0-0
-	github.com/soheilhy/cmux v0.0.0-0
-	github.com/spaolacci/murmur3 v0.0.0-0
+	github.com/skeema/knownhosts v0.0.0-0
+	github.com/sorairolake/lzip-go v0.0.0-0
 	github.com/spf13/afero v0.0.0-0
-	github.com/spf13/cast v0.0.0-0
-	github.com/spf13/jwalterweatherman v0.0.0-0
-	github.com/spf13/pflag v0.0.0-0
-	github.com/spf13/viper v0.0.0-0
-	github.com/stathat/consistent v0.0.0-0
-	github.com/stretchr/objx v0.0.0-0
+	github.com/ssor/bom v0.0.0-0
 	github.com/stretchr/testify v0.0.0-0
-	github.com/subosito/gotenv v0.0.0-0
-	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common v0.0.0-0
-	github.com/tiancaiamao/gp v0.0.0-0
-	github.com/tidwall/gjson v0.0.0-0
-	github.com/tidwall/match v0.0.0-0
-	github.com/tidwall/pretty v0.0.0-0
-	github.com/tikv/client-go/v2 v0.0.0-0
-	github.com/tikv/pd/client v0.0.0-0
-	github.com/tjfoc/gmsm v0.0.0-0
-	github.com/tklauser/go-sysconf v0.0.0-0
-	github.com/tklauser/numcpus v0.0.0-0
-	github.com/tmc/grpc-websocket-proxy v0.0.0-0
-	github.com/twitchyliquid64/golang-asm v0.0.0-0
-	github.com/twmb/murmur3 v0.0.0-0
-	github.com/twpayne/go-geom v0.0.0-0
-	github.com/uber/jaeger-client-go v0.0.0-0
-	github.com/ugorji/go/codec v0.0.0-0
-	github.com/urfave/cli v0.0.0-0
-	github.com/valyala/bytebufferpool v0.0.0-0
+	github.com/syndtr/goleveldb v0.0.0-0
+	github.com/tinylib/msgp v0.0.0-0
+	github.com/tstranex/u2f v0.0.0-0
+	github.com/ulikunitz/xz v0.0.0-0
+	github.com/unknwon/com v0.0.0-0
+	github.com/urfave/cli-docs/v3 v0.0.0-0
+	github.com/urfave/cli/v3 v0.0.0-0
 	github.com/valyala/fastjson v0.0.0-0
-	github.com/valyala/fasttemplate v0.0.0-0
+	github.com/wneessen/go-mail v0.0.0-0
 	github.com/x448/float16 v0.0.0-0
-	github.com/xiang90/probing v0.0.0-0
-	github.com/xiaofan-luan/pulsarctl v0.0.0-0
-	github.com/yusufpapurcu/wmi v0.0.0-0
-	github.com/zeebo/xxh3 v0.0.0-0
-	github.com/zilliztech/woodpecker v0.0.0-0
+	github.com/xanzy/ssh-agent v0.0.0-0
+	github.com/xeipuuv/gojsonpointer v0.0.0-0
+	github.com/xeipuuv/gojsonreference v0.0.0-0
+	github.com/xeipuuv/gojsonschema v0.0.0-0
+	github.com/xi2/xz v0.0.0-0
+	github.com/yohcop/openid-go v0.0.0-0
+	github.com/yuin/goldmark v0.0.0-0
+	github.com/yuin/goldmark-highlighting/v2 v0.0.0-0
+	github.com/yuin/goldmark-meta v0.0.0-0
+	github.com/zeebo/assert v0.0.0-0
+	github.com/zeebo/blake3 v0.0.0-0
 )

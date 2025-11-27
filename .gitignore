@@ -6,3 +6,6 @@ __pycache__*
 .env.test
 .env.production
 .env*
+.github/workflows
+*.yaml
+*.yml
