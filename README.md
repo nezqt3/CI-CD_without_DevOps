@@ -39,4 +39,6 @@ _Если найдётся `pom.xml` — используется `maven-simple`
    python -m venv .venv
    source .venv/bin/activate
    pip install -r requirements.txt
+
+   python parse/index.py --repo https://github.com/example/example-repo
    ```
