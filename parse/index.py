@@ -5,7 +5,7 @@ from get_using_languages import Language
 
 path = "https://github.com/nezqt3/VirtualAssistentRZD"
 path_js = "https://github.com/nezqt3/Scentury"
-path_java = "https://github.com/apache/kafka"
+path_java = "https://github.com/nezqt3/cryptoAnalyzer"
 
 language = Language(path=path_java).get_main_language()
 

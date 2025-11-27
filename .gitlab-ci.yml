@@ -1,0 +1,30 @@
+stages:
+- build
+- test
+- deploy
+variables:
+  MAVEN_OPTS: -Dmaven.test.failure.ignore=true
+  GRADLE_OPTS: -Dorg.gradle.daemon=false
+build:
+  stage: build
+  image: eclipse-temurin:17
+  script:
+  - mkdir -p build
+  - find src -name "*.java" > sources.txt
+  - javac @sources.txt -d build
+  artifacts:
+    paths:
+    - build/
+    expire_in: 2 hours
+test:
+  stage: test
+  image: alpine:latest
+  script:
+  - echo '⚠ No test runner available for plain Java — skipping'
+deploy:
+  stage: deploy
+  image: alpine:latest
+  script:
+  - echo 'Deploy step'
+  only:
+  - main
