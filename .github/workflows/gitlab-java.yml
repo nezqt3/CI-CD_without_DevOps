@@ -1,24 +1,24 @@
 stages:
-- build
-- test
-- deploy
+  - build
+  - test
+  - deploy
 variables:
   GRADLE_OPTS: -Dorg.gradle.daemon=false
 run_tests:
   stage: test
   image: gradle:8.3-jdk17
   script:
-  - ./gradlew test --parallel --continue
+    - ./gradlew test --parallel --continue
   artifacts:
     when: always
     reports:
-      junit: '**/build/test-results/test/*.xml'
+      junit: "**/build/test-results/test/*.xml"
     expire_in: 1 hour
-  dependencies: []
+  dependen  cies: []
 deploy:
   stage: deploy
   image: alpine:latest
   script:
-  - echo 'Deploy step'
+    - echo 'Deploy step'
   only:
-  - main
+    - main
