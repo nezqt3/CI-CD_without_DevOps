@@ -144,6 +144,58 @@ class ParserJavaScript:
         with open(output_file, "w", encoding="utf-8") as f:
             yaml.dump(data, f, allow_unicode=True, sort_keys=False)
         print(f"Анализ завершен. Результат в: {output_file}")
+        
+    def generate_gitlab_ci(self, data, output_file=".github/workflows/gitlab-js-ci.yml"):
+        ci = {
+            "stages": ["install", "build", "test", "deploy"],
+            "variables": {"NODE_VERSION": data["ci_config"]["node_version"]}
+        }
+
+        # Install stage
+        ci["install"] = {
+            "stage": "install",
+            "image": f"node:{data['ci_config']['node_version']}",
+            "script": [data["ci_config"]["install_command"]],
+            "artifacts": {"paths": ["node_modules/"], "expire_in": "1 hour"}
+        }
+
+        # Build stage
+        if data["ci_config"]["has_build"]:
+            ci["build"] = {
+                "stage": "build",
+                "image": f"node:{data['ci_config']['node_version']}",
+                "script": [data["ci_config"]["build_command"]],
+                "artifacts": {"paths": ["dist/"], "expire_in": "1 hour"},
+                "dependencies": ["install"]
+            }
+
+        # Test stage
+        if data["ci_config"]["has_test"]:
+            ci["test"] = {
+                "stage": "test",
+                "image": f"node:{data['ci_config']['node_version']}",
+                "script": [data["ci_config"]["test_command"]],
+                "artifacts": {"when": "always", "reports": {"junit": "**/test-results/*.xml"}},
+                "dependencies": ["install", "build"] if "build" in ci else ["install"]
+            }
+
+        # Deploy stage (заглушка)
+        ci["deploy"] = {
+            "stage": "deploy",
+            "image": "alpine:latest",
+            "script": ["echo 'Deploy step'"],
+            "only": ["main"]
+        }
+
+        with open(output_file, "w", encoding="utf-8") as f:
+            yaml.dump(ci, f, sort_keys=False, allow_unicode=True)
+        print(f"GitLab CI создан: {output_file}")
+
+
+    def save_to_yaml(self, data, output_file="js_repo_analysis.yaml"):
+        with open(output_file, "w", encoding="utf-8") as f:
+            yaml.dump(data, f, allow_unicode=True, sort_keys=False)
+        print(f"Анализ завершен. Результат в: {output_file}")
 
 
 if __name__ == "__main__":

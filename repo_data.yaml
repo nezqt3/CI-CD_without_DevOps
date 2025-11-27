@@ -1,4 +1,1060 @@
-repository: https://github.com/nezqt3/cryptoAnalyzer
+repository: https://github.com/keycloak/keycloak
 dependencies:
-  maven: []
+  maven:
+  - groupId: org.infinispan
+    artifactId: infinispan-bom
+    version: ${infinispan.version}
+    scope: import
+    optional: false
+    exclusions: []
+  - groupId: io.quarkus.platform
+    artifactId: quarkus-bom
+    version: ${quarkus.version}
+    scope: import
+    optional: false
+    exclusions: []
+  - groupId: io.sundr
+    artifactId: builder-annotations
+    version: ${sundrio.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.antlr
+    artifactId: antlr4-runtime
+    version: ${antlr4.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: com.thoughtworks.xstream
+    artifactId: xstream
+    version: ${xstream.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.snakeyaml
+    artifactId: snakeyaml-engine
+    version: ${org.snakeyaml.snakeyaml-engine.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.jboss
+    artifactId: jboss-dmr
+    version: ${jboss.dmr.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: com.sun.istack
+    artifactId: istack-commons-runtime
+    version: ${sun.istack.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: com.sun.istack
+    artifactId: istack-commons-tools
+    version: ${sun.istack.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: com.sun.xml.messaging.saaj
+    artifactId: saaj-impl
+    version: ${sun.saaj.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: com.sun.xml.bind.external
+    artifactId: rngom
+    version: ${sun.xml.bind.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: com.sun.xml.ws
+    artifactId: rt
+    version: ${sun.xml.ws.version}
+    scope: compile
+    optional: false
+    exclusions:
+    - groupId: com.fasterxml.woodstox
+      artifactId: woodstox-core
+    - groupId: org.glassfish.jaxb
+      artifactId: txw2
+    - groupId: org.glassfish.ha
+      artifactId: ha-api
+    - groupId: com.sun.xml.messaging.saaj
+      artifactId: saaj-impl
+  - groupId: org.glassfish.jaxb
+    artifactId: xsom
+    version: ${org.glassfish.jaxb.xsom.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.mapstruct
+    artifactId: mapstruct
+    version: ${org.mapstruct.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.bouncycastle
+    artifactId: bcpkix-fips
+    version: ${bouncycastle.pkixfips.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.bouncycastle
+    artifactId: bc-fips
+    version: ${bouncycastle.bcfips.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.bouncycastle
+    artifactId: bctls-fips
+    version: ${bouncycastle.bctls-fips.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.bouncycastle
+    artifactId: bcutil-fips
+    version: ${bouncycastle.bcutilfips.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: com.github.ua-parser
+    artifactId: uap-java
+    version: ${ua-parser.version}
+    scope: compile
+    optional: false
+    exclusions:
+    - groupId: org.yaml
+      artifactId: snakeyaml
+  - groupId: org.yaml
+    artifactId: snakeyaml
+    version: ${org.yaml.snakeyaml.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: jakarta.mail
+    artifactId: jakarta.mail-api
+    version: ${jakarta.mail.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.eclipse.angus
+    artifactId: angus-mail
+    version: ${angus.mail.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: jakarta.xml.ws
+    artifactId: jakarta.xml.ws-api
+    version: ${jakarta.xml.ws.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: jakarta.xml.soap
+    artifactId: jakarta.xml.soap-api
+    version: ${jakarta.xml.soap.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.jboss.resteasy
+    artifactId: resteasy-core
+    version: ${resteasy.version}
+    scope: compile
+    optional: false
+    exclusions:
+    - groupId: log4j
+      artifactId: log4j
+    - groupId: org.slf4j
+      artifactId: slf4j-api
+    - groupId: org.slf4j
+      artifactId: slf4j-simple
+    - groupId: org.jboss
+      artifactId: jandex
+  - groupId: org.jboss.resteasy
+    artifactId: resteasy-core-spi
+    version: ${resteasy.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.jboss.resteasy
+    artifactId: resteasy-multipart-provider
+    version: ${resteasy.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.jboss.resteasy
+    artifactId: resteasy-jackson2-provider
+    version: ${resteasy.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.jboss.resteasy
+    artifactId: resteasy-jaxb-provider
+    version: ${resteasy.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.jboss.resteasy
+    artifactId: resteasy-client
+    version: ${resteasy.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.jboss.resteasy
+    artifactId: resteasy-undertow
+    version: ${resteasy.undertow.version}
+    scope: compile
+    optional: false
+    exclusions:
+    - groupId: io.undertow
+      artifactId: undertow-servlet
+    - groupId: io.undertow
+      artifactId: undertow-core
+  - groupId: org.jboss.spec.javax.xml.bind
+    artifactId: jboss-jaxb-api_2.3_spec
+    version: ${jboss.spec.javax.xml.bind.jboss-jaxb-api_2.3_spec.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.jboss.spec.javax.servlet.jsp
+    artifactId: jboss-jsp-api_2.3_spec
+    version: ${jboss.spec.javax.servlet.jsp.jboss-jsp-api_2.3_spec.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: io.undertow
+    artifactId: undertow-servlet
+    version: ${undertow.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: io.undertow
+    artifactId: undertow-core
+    version: ${undertow.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.picketlink
+    artifactId: picketlink-wildfly-common
+    version: ${picketlink.version}
+    scope: test
+    optional: false
+    exclusions: []
+  - groupId: log4j
+    artifactId: log4j
+    version: ${log4j.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.apache.logging.log4j
+    artifactId: log4j-core
+    version: ${log4j2-api.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.apache.logging.log4j
+    artifactId: log4j-api
+    version: ${log4j2-api.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: com.googlecode.owasp-java-html-sanitizer
+    artifactId: owasp-java-html-sanitizer
+    version: ${owasp.html.sanitizer.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: com.googlecode.owasp-java-html-sanitizer
+    artifactId: java8-shim
+    version: ${owasp.html.sanitizer.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: com.googlecode.owasp-java-html-sanitizer
+    artifactId: java10-shim
+    version: ${owasp.html.sanitizer.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: junit
+    artifactId: junit
+    version: ${junit.version}
+    scope: test
+    optional: false
+    exclusions: []
+  - groupId: com.h2database
+    artifactId: h2
+    version: ${h2.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.hibernate.validator
+    artifactId: hibernate-validator
+    version: ${hibernate-validator.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.hibernate.orm
+    artifactId: hibernate-c3p0
+    version: ${hibernate.c3p0.version}
+    scope: test
+    optional: false
+    exclusions: []
+  - groupId: org.freemarker
+    artifactId: freemarker
+    version: ${freemarker.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.apache.santuario
+    artifactId: xmlsec
+    version: ${xmlsec.version}
+    scope: compile
+    optional: false
+    exclusions:
+    - groupId: com.fasterxml.woodstox
+      artifactId: woodstox-core
+  - groupId: org.wildfly
+    artifactId: wildfly-dist
+    version: ${wildfly.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.openjdk.nashorn
+    artifactId: nashorn-core
+    version: ${nashorn.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.twitter4j
+    artifactId: twitter4j-core
+    version: ${twitter4j.version}
+    scope: compile
+    optional: false
+    exclusions:
+    - groupId: org.jetbrains
+      artifactId: annotations
+  - groupId: com.google.zxing
+    artifactId: core
+    version: ${google.zxing.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: com.google.zxing
+    artifactId: javase
+    version: ${google.zxing.version}
+    scope: compile
+    optional: false
+    exclusions:
+    - groupId: com.beust
+      artifactId: jcommander
+  - groupId: com.icegreen
+    artifactId: greenmail
+    version: ${greenmail.version}
+    scope: test
+    optional: false
+    exclusions: []
+  - groupId: org.subethamail
+    artifactId: subethasmtp
+    version: ${subethasmtp.version}
+    scope: test
+    optional: false
+    exclusions: []
+  - groupId: org.apache.directory.server
+    artifactId: apacheds-core
+    version: ${apacheds.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.apache.directory.server
+    artifactId: apacheds-core-api
+    version: ${apacheds.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.apache.directory.server
+    artifactId: apacheds-core-annotations
+    version: ${apacheds.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.apache.directory.server
+    artifactId: apacheds-interceptor-kerberos
+    version: ${apacheds.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.apache.directory.server
+    artifactId: apacheds-server-annotations
+    version: ${apacheds.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.apache.directory.api
+    artifactId: api-ldap-codec-standalone
+    version: ${apacheds.codec.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.apache.jmeter
+    artifactId: ApacheJMeter_java
+    version: ${jmeter.version}
+    scope: test
+    optional: false
+    exclusions: []
+  - groupId: org.dom4j
+    artifactId: dom4j
+    version: ${dom4j.version}
+    scope: test
+    optional: false
+    exclusions: []
+  - groupId: xml-apis
+    artifactId: xml-apis
+    version: ${xml-apis.version}
+    scope: test
+    optional: false
+    exclusions: []
+  - groupId: org.slf4j
+    artifactId: slf4j-reload4j
+    version: ${slf4j.version}
+    scope: test
+    optional: false
+    exclusions: []
+  - groupId: com.mysql
+    artifactId: mysql-connector-j
+    version: ${mysql-jdbc.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.wildfly.common
+    artifactId: wildfly-common
+    version: ${wildfly.common.quarkus.aligned.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.wildfly.core
+    artifactId: wildfly-controller
+    version: ${wildfly.core.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.wildfly.core
+    artifactId: wildfly-server
+    version: ${wildfly.core.version}
+    scope: compile
+    optional: false
+    exclusions:
+    - groupId: io.smallrye
+      artifactId: jandex
+  - groupId: org.wildfly
+    artifactId: wildfly-ee
+    version: ${wildfly.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.wildfly
+    artifactId: wildfly-galleon-pack
+    version: ${wildfly.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.wildfly
+    artifactId: wildfly-galleon-pack
+    version: ${wildfly.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: ${ee.maven.groupId}
+    artifactId: wildfly-ee-galleon-pack
+    version: ${wildfly.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: ${ee.maven.groupId}
+    artifactId: wildfly-servlet-galleon-pack
+    version: ${ee.maven.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.wildfly
+    artifactId: wildfly-web-feature-pack
+    version: ${wildfly.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.wildfly.core
+    artifactId: wildfly-subsystem-test
+    version: ${wildfly.core.version}
+    scope: test
+    optional: false
+    exclusions: []
+  - groupId: ${ee.maven.groupId}
+    artifactId: wildfly-undertow
+    version: ${wildfly.version}
+    scope: test
+    optional: false
+    exclusions:
+    - groupId: io.undertow.jastow
+      artifactId: jastow
+  - groupId: org.wildfly.core
+    artifactId: wildfly-subsystem-test-framework
+    version: ${wildfly.core.version}
+    scope: test
+    optional: false
+    exclusions: []
+  - groupId: org.wildfly.core
+    artifactId: wildfly-core-feature-pack-common
+    version: ${wildfly.core.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.wildfly.core
+    artifactId: wildfly-core-feature-pack-ee-9-api
+    version: ${wildfly.core.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.wildfly.core
+    artifactId: wildfly-core-feature-pack-galleon-common
+    version: ${wildfly.core.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.wildfly.core
+    artifactId: wildfly-core-feature-pack-galleon-pruned
+    version: ${wildfly.core.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.wildfly.core
+    artifactId: wildfly-core-feature-pack
+    version: ${wildfly.core.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.wildfly.core
+    artifactId: wildfly-core-feature-pack
+    version: ${wildfly.core.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.wildfly.core
+    artifactId: wildfly-core-galleon-pack
+    version: ${wildfly.core.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.wildfly.core
+    artifactId: wildfly-core-galleon-pack
+    version: ${wildfly.core.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.wildfly.core
+    artifactId: wildfly-version
+    version: ${wildfly.core.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: ${ee.maven.groupId}
+    artifactId: wildfly-web-common
+    version: ${wildfly.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.wildfly.security.elytron-web
+    artifactId: undertow-server
+    version: ${elytron.undertow-server.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.wildfly.security
+    artifactId: wildfly-elytron-http-oidc
+    version: ${wildfly-elytron.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.liquibase
+    artifactId: liquibase-core
+    version: ${liquibase.version}
+    scope: compile
+    optional: false
+    exclusions:
+    - groupId: org.yaml
+      artifactId: snakeyaml
+    - groupId: org.apache.commons
+      artifactId: commons-text
+  - groupId: org.keycloak
+    artifactId: keycloak-client-registration-api
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-common
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-core
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-core
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-config-api
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-client-api
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-kerberos-federation
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-sssd-federation
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-ldap-federation
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-ipatuura-federation
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-dependencies-server-min
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-dependencies-server-all
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-themes
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-themes-vendor
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-adapter-spi
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-admin-client-jee-tests
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-admin-client-tests
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-jboss-adapter-core
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-saml-wildfly-elytron-adapter
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-server-spi
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-server-spi-private
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-model-jpa
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-model-storage
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-model-storage-private
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-model-storage-services
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-model-infinispan
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: launcher
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-saml-core
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-saml-core-public
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-saml-adapter-api-public
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-saml-adapter-core
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-saml-adapter-galleon-pack
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-saml-wildfly-subsystem
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-services
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-services
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-authz-client-tests
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-authz-policy-common
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-quarkus-server
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-quarkus-server-deployment
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-quarkus-server-app
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-junit5
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-account-ui
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-admin-ui
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-rest-admin-ui-ext
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-admin-v2-api
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-admin-v2-rest
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-saml-wildfly-modules
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-quarkus-dist
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-util-embedded-ldap
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-api-docs-dist
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-server-feature-pack
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-testsuite-utils
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-testsuite-tools
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-testsuite-tools
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak.tests
+    artifactId: keycloak-tests-utils-shared
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-crypto-default
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-crypto-fips1402
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-crypto-elytron
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-admin-cli
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-client-cli-dist
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: com.webauthn4j
+    artifactId: webauthn4j-core
+    version: ${webauthn4j.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: com.webauthn4j
+    artifactId: webauthn4j-util
+    version: ${webauthn4j.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.apache.kerby
+    artifactId: kerby-asn1
+    version: ${org.apache.kerby.kerby-asn1.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-server-galleon-pack
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.keycloak
+    artifactId: keycloak-server-galleon-pack
+    version: ${project.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.wildfly.galleon-plugins
+    artifactId: wildfly-galleon-plugins
+    version: ${org.wildfly.galleon-plugins.version}
+    scope: compile
+    optional: false
+    exclusions:
+    - groupId: org.jboss.galleon
+      artifactId: '*'
+  - groupId: org.wildfly.galleon-plugins
+    artifactId: wildfly-config-gen
+    version: ${org.wildfly.galleon-plugins.version}
+    scope: compile
+    optional: false
+    exclusions:
+    - groupId: '*'
+      artifactId: '*'
+  - groupId: org.wildfly.galleon-plugins
+    artifactId: transformer
+    version: ${org.wildfly.galleon-plugins.version}
+    scope: compile
+    optional: false
+    exclusions:
+    - groupId: '*'
+      artifactId: '*'
+  - groupId: org.jboss.spec.javax.servlet
+    artifactId: jboss-servlet-api_3.0_spec
+    version: ${servlet.api.30.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.jboss.spec.javax.ws.rs
+    artifactId: jboss-jaxrs-api_2.1_spec
+    version: ${jboss-jaxrs-api_2.1_spec}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.jboss.spec.javax.servlet
+    artifactId: jboss-servlet-api_4.0_spec
+    version: ${jboss-servlet-api_4.0_spec}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.wildfly.glow
+    artifactId: wildfly-glow-core
+    version: ${version.org.wildfly.glow}
+    scope: test
+    optional: false
+    exclusions: []
+  - groupId: org.wildfly.glow
+    artifactId: wildfly-glow-maven-resolver
+    version: ${version.org.wildfly.glow}
+    scope: test
+    optional: false
+    exclusions: []
+  - groupId: com.apicatalog
+    artifactId: titanium-json-ld
+    version: ${com.apicatalog.titanium-json-ld.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: io.setl
+    artifactId: rdf-urdna
+    version: ${io.setl.rdf-urdna.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.infinispan
+    artifactId: infinispan-core
+    version: ${infinispan.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.wildfly.core
+    artifactId: wildfly-embedded
+    version: ${wildfly.core.version}
+    scope: compile
+    optional: false
+    exclusions: []
+  - groupId: org.wildfly.common
+    artifactId: wildfly-common
+    version: ${wildfly.common.wildfly.aligned.version}
+    scope: compile
+    optional: false
+    exclusions: []
   gradle: []

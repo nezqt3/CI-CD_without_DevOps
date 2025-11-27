@@ -32,17 +32,24 @@ _Если найдётся `pom.xml` — используется `maven-simple`
 
 Этот проект использует следующие технологии:
 
-| Технология | Логотип |
-|------------|---------|
-| Python | ![Python](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg) |
-| GraphQL | ![GraphQL](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg) |
-| REST API | ![REST API](https://img.icons8.com/color/48/000000/api-settings.png) |
-| GitLab CI/CD | ![GitLab](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-plain.svg) |
-| Nexus | ![Nexus](https://upload.wikimedia.org/wikipedia/commons/6/63/Apache_Maven_Logo.svg) |
+| Технология   | Логотип                                                                                  |
+| ------------ | ---------------------------------------------------------------------------------------- |
+| Python       | ![Python](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg) |
+| GraphQL      | ![GraphQL](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg) |
+| REST API     | ![REST API](https://img.icons8.com/color/48/000000/api-settings.png)                     |
+| GitLab CI/CD | ![GitLab](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-plain.svg)    |
+| Nexus        | ![Nexus](https://upload.wikimedia.org/wikipedia/commons/6/63/Apache_Maven_Logo.svg)      |
 
 ## 🔧 Как использовать
 
-1. Клонируйте репозиторий
+1. Назначьте в .env ваш токен для доступа к REST API вида:
+
+   ```bash
+   GITHUB_TOKEN=ваш_токен
+   ```
+
+2. Клонируйте репозиторий
+
    ```bash
    git clone https://github.com/nezqt3/CI-CD_without_DevOps.git
    cd CI-CD_without_DevOps

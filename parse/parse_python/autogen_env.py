@@ -2,8 +2,12 @@ import requests
 import yaml
 import sys
 import re
+import os
+from dotenv import load_dotenv
 
-GITHUB_TOKEN = ""
+load_dotenv()
+
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 
 def parse_github_url(url: str):
     match = re.search(r"github\.com/([^/]+)/([^/]+)", url)

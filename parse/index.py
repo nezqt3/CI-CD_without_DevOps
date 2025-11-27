@@ -18,6 +18,7 @@ if language == 'JavaScript':
     parser_java_script = ParserJavaScript(path=path)
     data = parser_java_script.parse_repo()
     parser_java_script.save_to_yaml(data)
+    parser_java_script.generate_gitlab_ci(data)
 elif language == "Java":
     parser_java = ParserJava(path=path)
     data = parser_java.parse_repo()
