@@ -1,4 +1,4 @@
-repository_name: Scentury
+repository_name: frontend
 language: javascript
 detected_stack:
   framework: react
@@ -8,6 +8,24 @@ ci_config:
   package_manager: npm
   install_command: npm install
   node_version: latest
+  scripts:
+    start: react-scripts start
+    build: react-scripts build
+    test: react-scripts test
+    eject: react-scripts eject
+  dependencies:
+    '@telegram-apps/sdk': ^3.11.8
+    '@telegram-apps/sdk-react': ^3.3.9
+    '@testing-library/dom': ^10.4.1
+    '@testing-library/jest-dom': ^6.9.1
+    '@testing-library/react': ^16.3.0
+    '@testing-library/user-event': ^13.5.0
+    react: ^19.2.0
+    react-dom: ^19.2.0
+    react-router-dom: ^7.9.4
+    react-scripts: ^5.0.1
+    web-vitals: ^2.1.4
+  dev_dependencies: {}
   has_build: true
   build_command: npm run build
   has_test: true

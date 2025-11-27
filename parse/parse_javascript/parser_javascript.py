@@ -5,10 +5,6 @@ import json
 
 class ParserJavaScript:
     def __init__(self, path: str, token: str = None):
-        """
-        :param path: Ссылка на репозиторий
-        :param token: GitHub Token (очень желателен, чтобы избежать лимитов API и читать приватные репо)
-        """
         self.path = path
         parts = path.rstrip("/").split("/")
         self.owner = parts[-2]
@@ -79,7 +75,7 @@ class ParserJavaScript:
         file_names = [item["name"] for item in root_items]
         
         # 1. Определение Package Manager
-        package_manager = "npm" # default
+        package_manager = "npm"  # default
         install_cmd = "npm install"
         
         if "yarn.lock" in file_names:
@@ -91,9 +87,10 @@ class ParserJavaScript:
 
         # 2. Поиск и парсинг package.json
         pkg_json_data = {}
-        node_version = "latest" # fallback
-        has_build_script = False
-        has_test_script = False
+        node_version = "latest"  # fallback
+        scripts_dict = {}
+        dependencies = {}
+        dev_dependencies = {}
         
         package_json_item = next((item for item in root_items if item["name"] == "package.json"), None)
         
@@ -103,10 +100,12 @@ class ParserJavaScript:
                 try:
                     pkg_json_data = json.loads(content_str)
                     
-                    # Проверяем скрипты
-                    scripts = pkg_json_data.get("scripts", {})
-                    has_build_script = "build" in scripts
-                    has_test_script = "test" in scripts
+                    # Скрипты npm
+                    scripts_dict = pkg_json_data.get("scripts", {})
+                    
+                    # Зависимости
+                    dependencies = pkg_json_data.get("dependencies", {})
+                    dev_dependencies = pkg_json_data.get("devDependencies", {})
                     
                     # Проверяем версию Node
                     engines = pkg_json_data.get("engines", {})
@@ -128,14 +127,18 @@ class ParserJavaScript:
                 "package_manager": package_manager,
                 "install_command": install_cmd,
                 "node_version": node_version,
-                "has_build": has_build_script,
-                "build_command": f"{package_manager} run build" if has_build_script else None,
-                "has_test": has_test_script,
-                "test_command": f"{package_manager} run test" if has_test_script else None,
+                "scripts": scripts_dict,
+                "dependencies": dependencies,
+                "dev_dependencies": dev_dependencies,
+                "has_build": "build" in scripts_dict,
+                "build_command": f"{package_manager} run build" if "build" in scripts_dict else None,
+                "has_test": "test" in scripts_dict,
+                "test_command": f"{package_manager} run test" if "test" in scripts_dict else None,
             }
         }
         
         return repo_data
+
 
     def save_to_yaml(self, data, output_file="js_repo_analysis.yaml"):
         with open(output_file, "w", encoding="utf-8") as f:
