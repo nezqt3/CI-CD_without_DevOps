@@ -82,7 +82,7 @@ def get_go_dependencies(owner: str, repo: str) -> List[Tuple[str, str]]:
             go_deps.append((mod, ver))
     return go_deps
 
-def write_go_mod(deps: List[Tuple[str, str]], owner: str, repo: str, out_file="go.mod", go_version="1.20"):
+def write_go_mod(deps: List[Tuple[str, str]], owner: str, repo: str, out_file=".dependencies/go.mod", go_version="1.20"):
     module_name = f"github.com/{owner}/{repo}-autogen"
     lines = []
     lines.append(f"module {module_name}\n")

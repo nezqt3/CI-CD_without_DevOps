@@ -192,7 +192,7 @@ class ParserJavaScript:
         print(f"GitLab CI создан: {output_file}")
 
 
-    def save_to_yaml(self, data, output_file="js_repo_analysis.yaml"):
+    def save_to_yaml(self, data, output_file=".dependencies/js_repo_analysis.yaml"):
         with open(output_file, "w", encoding="utf-8") as f:
             yaml.dump(data, f, allow_unicode=True, sort_keys=False)
         print(f"Анализ завершен. Результат в: {output_file}")
