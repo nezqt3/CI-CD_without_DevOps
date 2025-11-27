@@ -1,0 +1,39 @@
+stages:
+- setup
+- test
+- deploy
+variables:
+  PYTHON_VERSION: '3.10'
+setup_env:
+  stage: setup
+  image: python:3.10-slim
+  before_script:
+  - pip install --upgrade pip
+  - pip install pyyaml
+  script:
+  - "echo '\u0423\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0430 \u0437\u0430\u0432\
+    \u0438\u0441\u0438\u043C\u043E\u0441\u0442\u0435\u0439'"
+  - if [ -f dependencies/environment.yml ]; then conda env create -f dependencies/environment.yml;
+    fi
+  - if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+  artifacts:
+    paths:
+    - dependencies/environment.yml
+run_tests:
+  stage: test
+  image: python:3.10-slim
+  script:
+  - "echo '\u0417\u0430\u043F\u0443\u0441\u043A \u0442\u0435\u0441\u0442\u043E\u0432\
+    '"
+  - pytest || true
+  dependencies:
+  - setup_env
+deploy:
+  stage: deploy
+  image: python:3.10-slim
+  script:
+  - "echo '\u0414\u0435\u043F\u043B\u043E\u0439 (\u043F\u0440\u0438\u043C\u0435\u0440\
+    )'"
+  when: manual
+  dependencies:
+  - run_tests

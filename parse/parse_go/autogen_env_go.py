@@ -101,7 +101,7 @@ def write_go_mod(deps: List[Tuple[str, str]], owner: str, repo: str, out_file="d
 # -----------------------
 # GITLAB CI GENERATOR
 # -----------------------
-def generate_gitlab_ci(go_version="1.20", output_file=".github/workflows/gitlab-ci-go.yml"):
+def generate_gitlab_ci(go_version="1.20", output_file=".gitlab/workflows/gitlab-ci-go.yml"):
     ci = {
         "stages": ["lint", "build", "test", "deploy"],
         "lint": {

@@ -4,14 +4,261 @@ stages:
 - deploy
 variables:
   GRADLE_OPTS: -Dorg.gradle.daemon=false
-maven_build:
+build_clients:
   stage: build
-  image: maven:3.9.1-openjdk-17
+  image: gradle:8.3-jdk17
   script:
-  - mvn clean install -B
+  - ./gradlew :clients:clean :clients:build --parallel
   artifacts:
     paths:
-    - target/
+    - clients/build/libs/
+    expire_in: 1 hour
+build_connect_api:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :connect:api:clean :connect:api:build --parallel
+  artifacts:
+    paths:
+    - connect:api/build/libs/
+    expire_in: 1 hour
+build_connect_json:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :connect:json:clean :connect:json:build --parallel
+  artifacts:
+    paths:
+    - connect:json/build/libs/
+    expire_in: 1 hour
+build_connect_mirror-client:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :connect:mirror-client:clean :connect:mirror-client:build --parallel
+  artifacts:
+    paths:
+    - connect:mirror-client/build/libs/
+    expire_in: 1 hour
+build_connect_runtime:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :connect:runtime:clean :connect:runtime:build --parallel
+  artifacts:
+    paths:
+    - connect:runtime/build/libs/
+    expire_in: 1 hour
+build_connect_test-plugins:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :connect:test-plugins:clean :connect:test-plugins:build --parallel
+  artifacts:
+    paths:
+    - connect:test-plugins/build/libs/
+    expire_in: 1 hour
+build_connect_transforms:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :connect:transforms:clean :connect:transforms:build --parallel
+  artifacts:
+    paths:
+    - connect:transforms/build/libs/
+    expire_in: 1 hour
+build_coordinator-common:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :coordinator-common:clean :coordinator-common:build --parallel
+  artifacts:
+    paths:
+    - coordinator-common/build/libs/
+    expire_in: 1 hour
+build_core:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :core:clean :core:build --parallel
+  artifacts:
+    paths:
+    - core/build/libs/
+    expire_in: 1 hour
+build_group-coordinator:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :group-coordinator:clean :group-coordinator:build --parallel
+  artifacts:
+    paths:
+    - group-coordinator/build/libs/
+    expire_in: 1 hour
+build_group-coordinator_group-coordinator-api:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :group-coordinator:group-coordinator-api:clean :group-coordinator:group-coordinator-api:build
+    --parallel
+  artifacts:
+    paths:
+    - group-coordinator:group-coordinator-api/build/libs/
+    expire_in: 1 hour
+build_metadata:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :metadata:clean :metadata:build --parallel
+  artifacts:
+    paths:
+    - metadata/build/libs/
+    expire_in: 1 hour
+build_raft:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :raft:clean :raft:build --parallel
+  artifacts:
+    paths:
+    - raft/build/libs/
+    expire_in: 1 hour
+build_server:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :server:clean :server:build --parallel
+  artifacts:
+    paths:
+    - server/build/libs/
+    expire_in: 1 hour
+build_server-common:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :server-common:clean :server-common:build --parallel
+  artifacts:
+    paths:
+    - server-common/build/libs/
+    expire_in: 1 hour
+build_share-coordinator:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :share-coordinator:clean :share-coordinator:build --parallel
+  artifacts:
+    paths:
+    - share-coordinator/build/libs/
+    expire_in: 1 hour
+build_storage:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :storage:clean :storage:build --parallel
+  artifacts:
+    paths:
+    - storage/build/libs/
+    expire_in: 1 hour
+build_storage_storage-api:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :storage:storage-api:clean :storage:storage-api:build --parallel
+  artifacts:
+    paths:
+    - storage:storage-api/build/libs/
+    expire_in: 1 hour
+build_streams:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :streams:clean :streams:build --parallel
+  artifacts:
+    paths:
+    - streams/build/libs/
+    expire_in: 1 hour
+build_streams_integration-tests:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :streams:integration-tests:clean :streams:integration-tests:build --parallel
+  artifacts:
+    paths:
+    - streams:integration-tests/build/libs/
+    expire_in: 1 hour
+build_streams_streams-scala:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :streams:streams-scala:clean :streams:streams-scala:build --parallel
+  artifacts:
+    paths:
+    - streams:streams-scala/build/libs/
+    expire_in: 1 hour
+build_streams_test-utils:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :streams:test-utils:clean :streams:test-utils:build --parallel
+  artifacts:
+    paths:
+    - streams:test-utils/build/libs/
+    expire_in: 1 hour
+build_test-common_test-common-internal-api:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :test-common:test-common-internal-api:clean :test-common:test-common-internal-api:build
+    --parallel
+  artifacts:
+    paths:
+    - test-common:test-common-internal-api/build/libs/
+    expire_in: 1 hour
+build_test-common_test-common-runtime:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :test-common:test-common-runtime:clean :test-common:test-common-runtime:build
+    --parallel
+  artifacts:
+    paths:
+    - test-common:test-common-runtime/build/libs/
+    expire_in: 1 hour
+build_test-common_test-common-util:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :test-common:test-common-util:clean :test-common:test-common-util:build
+    --parallel
+  artifacts:
+    paths:
+    - test-common:test-common-util/build/libs/
+    expire_in: 1 hour
+build_tools:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :tools:clean :tools:build --parallel
+  artifacts:
+    paths:
+    - tools/build/libs/
+    expire_in: 1 hour
+build_tools_tools-api:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :tools:tools-api:clean :tools:tools-api:build --parallel
+  artifacts:
+    paths:
+    - tools:tools-api/build/libs/
+    expire_in: 1 hour
+build_transaction-coordinator:
+  stage: build
+  image: gradle:8.3-jdk17
+  script:
+  - ./gradlew :transaction-coordinator:clean :transaction-coordinator:build --parallel
+  artifacts:
+    paths:
+    - transaction-coordinator/build/libs/
     expire_in: 1 hour
 run_tests:
   stage: test
@@ -23,7 +270,35 @@ run_tests:
     reports:
       junit: '**/build/test-results/test/*.xml'
     expire_in: 1 hour
-  dependencies: []
+  dependencies:
+  - build_clients
+  - build_connect_api
+  - build_connect_json
+  - build_connect_mirror-client
+  - build_connect_runtime
+  - build_connect_test-plugins
+  - build_connect_transforms
+  - build_coordinator-common
+  - build_core
+  - build_group-coordinator
+  - build_group-coordinator_group-coordinator-api
+  - build_metadata
+  - build_raft
+  - build_server
+  - build_server-common
+  - build_share-coordinator
+  - build_storage
+  - build_storage_storage-api
+  - build_streams
+  - build_streams_integration-tests
+  - build_streams_streams-scala
+  - build_streams_test-utils
+  - build_test-common_test-common-internal-api
+  - build_test-common_test-common-runtime
+  - build_test-common_test-common-util
+  - build_tools
+  - build_tools_tools-api
+  - build_transaction-coordinator
 deploy:
   stage: deploy
   image: alpine:latest

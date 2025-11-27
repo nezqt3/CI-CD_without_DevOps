@@ -88,6 +88,58 @@ def write_env_yml(deps: list, out_file="dependencies/environment.yml"):
     print(f"\n[OK] Файл {out_file} создан.")
     print(f"Найдено Python-зависимостей: {len(deps)}")
 
+def write_gitlab_ci_yml(out_file=".gitlab/workflows/gitlab-ci-py.yml"):
+    """
+    Создает базовый шаблон GitLab CI/CD для Python-проекта
+    с использованием environment.yml (conda) или pip.
+    """
+
+    gitlab_ci = {
+        "stages": ["setup", "test", "deploy"],
+        "variables": {
+            "PYTHON_VERSION": "3.10"
+        },
+        "setup_env": {
+            "stage": "setup",
+            "image": "python:3.10-slim",
+            "before_script": [
+                "pip install --upgrade pip",
+                "pip install pyyaml"
+            ],
+            "script": [
+                "echo 'Установка зависимостей'",
+                "if [ -f dependencies/environment.yml ]; then conda env create -f dependencies/environment.yml; fi",
+                "if [ -f requirements.txt ]; then pip install -r requirements.txt; fi"
+            ],
+            "artifacts": {
+                "paths": ["dependencies/environment.yml"]
+            }
+        },
+        "run_tests": {
+            "stage": "test",
+            "image": "python:3.10-slim",
+            "script": [
+                "echo 'Запуск тестов'",
+                "pytest || true"
+            ],
+            "dependencies": ["setup_env"]
+        },
+        "deploy": {
+            "stage": "deploy",
+            "image": "python:3.10-slim",
+            "script": [
+                "echo 'Деплой (пример)'"
+            ],
+            "when": "manual",
+            "dependencies": ["run_tests"]
+        }
+    }
+
+    with open(out_file, "w") as f:
+        yaml.dump(gitlab_ci, f, sort_keys=False)
+
+    print(f"[OK] {out_file} создан")
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:

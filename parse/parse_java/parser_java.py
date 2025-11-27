@@ -157,7 +157,7 @@ class ParserJava:
             yaml.dump(data, f, sort_keys=False, allow_unicode=True)
         print(f"YAML сохранён → {output}")
         
-    def save_gitlab_ci(self, data, output='.github/workflows/gitlab-java.yml'):
+    def save_gitlab_ci(self, data, output='.gitlab/workflows/gitlab-java.yml'):
 
         gitlab_ci = {
             "stages": ["build", "test", "deploy"],

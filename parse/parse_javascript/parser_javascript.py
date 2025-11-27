@@ -145,7 +145,7 @@ class ParserJavaScript:
             yaml.dump(data, f, allow_unicode=True, sort_keys=False)
         print(f"Анализ завершен. Результат в: {output_file}")
         
-    def generate_gitlab_ci(self, data, output_file=".github/workflows/gitlab-js-ci.yml"):
+    def generate_gitlab_ci(self, data, output_file=".gitlab/workflows/gitlab-js-ci.yml"):
         ci = {
             "stages": ["install", "build", "test", "deploy"],
             "variables": {"NODE_VERSION": data["ci_config"]["node_version"]}

@@ -1,4 +1,4 @@
-from parse_python.autogen_env import parse_github_url, get_dependencies, write_env_yml
+from parse_python.autogen_env import parse_github_url, get_dependencies, write_env_yml, write_gitlab_ci_yml
 from parse_javascript.parser_javascript import ParserJavaScript
 from parse_java.parser_java import ParserJava
 from parse_go.autogen_env_go import parse_github_url, get_go_dependencies, write_go_mod, generate_gitlab_ci
@@ -34,6 +34,7 @@ class Main:
             print(f"→ Получение SBOM из GitHub для: {owner}/{repo} ...")
             deps = get_dependencies(owner, repo)
             write_env_yml(deps)
+            write_gitlab_ci_yml()
         elif self.language == Languages.GO.value:
             owner, repo = parse_github_url(self.path)
             print(f"→ Получение SBOM из GitHub для: {owner}/{repo} ...")
@@ -50,3 +51,8 @@ if __name__ == '__main__':
     
     main = Main(path)
     main.launch_project()
+    
+# python parse/index.py --repo https://github.com/TryGhost/Ghost
+# python parse/index.py --repo https://github.com/syncthing/syncthing
+# python parse/index.py --repo https://github.com/apache/kafka
+# python parse/index.py --repo https://github.com/home-assistant/core
